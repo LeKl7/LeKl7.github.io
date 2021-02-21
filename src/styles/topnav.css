@@ -1,0 +1,96 @@
+@import 'root.css';
+@import 'animation.css';
+
+/* top Navigation */
+#topnav-container{
+  position: fixed;     /* Fixed topbar (stay in place on scroll and position relative to viewport) */
+  z-index: 1;      /* Stay on top of everything */
+  overflow: hidden;     /* Disable horizontal scroll */
+
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+#topnav {
+  position: relative;
+  flex-grow: 1;
+  height: calc(var(--logo-size)/2);
+
+  display: flex;
+  overflow-x: hidden;     /* Disable horizontal scroll */
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: var(--main-color);
+  border-bottom: 5px solid var(--secondary-color);
+}
+#topnav-routes-container
+{  
+  display: flex;
+  align-items: flex-start;
+}
+
+.nav-item {
+  margin-left: var(--topnav-item-margin);
+}
+a:hover {
+  text-decoration: none;
+}
+
+#topnav-social-container{
+    display: flex;
+    flex-flow: row nowrap;
+}
+.topnav-social {
+  flex: 1 0 0;
+  padding: 5px;
+  margin: 5px;
+  color: var(--secondary-color);
+  background-color: var(--main-color);
+  display: flex !important;
+}
+
+
+/* Hide the link that should open and close the topnav on small screens */
+#topnav-container .icon {
+  display: none;
+}
+
+@media only screen and (max-width: 670px){
+  #topnav {
+    justify-content: flex-end;
+    overflow: hidden;
+    align-items: flex-start;
+  }
+  #topnav-routes-container {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #topnav-container button.icon {
+    display: flex;
+    align-self: flex-end;
+    margin: 15px;
+    
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+    border: none;
+  }
+  .nav-item {
+    margin-top: 10px;
+    margin-right: 10px;
+  }
+  .topnav-container-expanded{
+    border-bottom: 5px solid var(--secondary-color);
+    background-color: var(--main-color);
+  }
+  .topnav-expanded {
+    border: none !important;
+    height: auto !important;
+  }
+}

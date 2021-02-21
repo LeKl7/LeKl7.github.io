@@ -1,0 +1,95 @@
+import {Component} from 'react';
+import '../styles/tags.css';
+import Arrows from './Arrows'
+import ClickableImage from '../modules/ClickableImage';
+import QuickLinks from '../modules/QuickLinks';
+
+export default class ProjectCard extends Component {
+    getCollaborationString = () => {
+        let str = "Collaboration with: ";
+        this.props.project.collaborators.map(c => {
+            str += c.name;
+            if(!this.props.project.collaborators.indexOf(c, 0) == this.props.project.collaborators.length -1)
+                str += ", ";
+        });
+        return str;
+    };
+
+    renderQuickLinks(left) {
+        const img = document.getElementById(`imgContainer${this.props.project.key}`);
+        const txt = document.getElementById(`textContainer${this.props.project.key}`);
+        /* console.log(img.clientWidth);
+        console.log(txt.clientWidth); */
+    }
+    render() {
+        return (
+            <div className="d-card-wrapper">
+            <div className="d-card">
+            {/* Image Container */}
+                <div className="d-card-img-container" id={`imgContainer${this.props.project.key}`}>
+                            {/*  <img className="d-card-img-main d-card-img"
+                            src= {`${process.env.PUBLIC_URL}/assets/imgs/${this.props.project.name}/Main.png`} 
+                            alt="MainImage"
+                            /> */}
+                            {/* Video */}
+                        <video className="d-card-img-main d-card-img" loop="loop" autoPlay muted controls>
+                            <source src={`${process.env.PUBLIC_URL}/assets/videos/${this.props.project.name}.mp4`} type="video/mp4"/></video>
+                        <div className="d-card-img-screenshots-container">
+                            <ClickableImage folder={this.props.project.name} imgName={"1.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage folder={this.props.project.name} imgName={"2.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage folder={this.props.project.name} imgName={"3.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage folder={this.props.project.name} imgName={"4.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                        </div>
+                </div>
+                {/* Text Container */}
+                <div className="d-card-text-container" id={`textContainer${this.props.project.key}`}>
+                    <div className="d-card-title-container">
+                        <h1 className="p header d-card-title">{this.props.project.name} 
+                        <sup style={{fontSize:"20px"}}> ({this.props.project.date})
+                            </sup></h1>
+                        <div className="d-card-tags-container">
+                        {this.props.project.tags.map((tag)=>{
+                            return(
+                                <div className={`p d-card-tag ${tag}`} key={tag}></div>
+                            )
+                        })}
+                        </div>
+                    </div>
+                    {/* Prokect Description */}
+                    <div className="p p-body d-card-description">
+                        {this.props.project.desctiption.map((p)=>{
+                            return(
+                                <div style={{marginBottom:"13px"}} key={this.props.project.desctiption.indexOf(p, 0)}>{p}</div>
+                            )
+                        })}
+                        {/* Collaborator info */}
+                        {this.props.project.collaborators != null &&
+                        <div className="p-oblique" style={{marginBottom:"13px"}}>
+                            Collaboration with: 
+                            {this.props.project.collaborators.map(c => {
+                                return (
+                                    <a className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" href={c.href} target="_blank" rel='noreferrer'
+                                        style={{verticalAlign: "top", marginLeft: "10px"}} key={this.props.project.collaborators.indexOf(c)}> {c.name} </a>
+                                );
+                            })}
+                        </div>}
+                    </div>
+                    <ul className="d-card-ul">
+                    {this.props.project.tasks.map((task)=>{
+                            this.renderQuickLinks();
+                            return(
+                                <li className={`p d-card-list`} key={this.props.project.tasks.indexOf(task, 0)}>{task}</li>
+                            )
+                    })}
+                    </ul>
+                    {/* Quick Links Right */}
+                    {this.props.project.quickLinks != null &&
+                        <QuickLinks links={this.props.project.quickLinks}/>
+                    }
+                </div>
+            </div>
+            <Arrows curProjIndex={this.props.project.key} isLast={this.props.isLast}/>
+            </div>
+        );
+    }
+}

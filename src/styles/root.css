@@ -1,0 +1,34 @@
+html body {
+    height:100%;
+    margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#root {
+    height:100%;
+    display: flex;
+    flex-flow: column;
+}
+:root{
+    --main-color: #111;
+    --secondary-color: #e4e3e3;
+    --logo-size: 150px;
+    --topnav-item-margin: 50px;
+    background-color: var(--main-color);
+    height: 100%;
+}
+.d-body {
+    height:100%;
+
+    background-color:var(--main-color);
+    color: var(--secondary-color);
+    padding: 15px 15px 15px calc(var(--topnav-width) + 15px);
+
+    padding-top: calc(var(--logo-size) /2);
+    flex-grow: 1;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    max-height: 100%;
+}

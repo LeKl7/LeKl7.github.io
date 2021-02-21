@@ -1,0 +1,98 @@
+.d-card-tag {
+    border-radius: 4px;
+    text-align: center;
+    color: var(--main-color) !important;
+    font-weight: 420;
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: inline-block;
+    margin-bottom: 0.3em;
+    margin-right: 0.3em;
+}
+.d-card-tag-overview {
+    border-left: 2.5px solid;
+    text-align: center;
+    font-weight: 420;
+    padding: 5px;
+    padding-left: 6px;
+    padding-right: 6px;
+    display: inline-block;
+    margin-bottom: 0.3em;
+    margin-right: 0.3em;
+    background: none !important;
+}
+
+.concept {
+    --color: #e45071;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.concept::after {
+    content:"Concept";
+}
+.storytelling {
+    --color: #f2bac3;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.storytelling::after {
+    content:"Storytelling";
+}
+.game-design {
+    --color: #48b19b;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.game-design::after {
+    content:"Game Design";
+}
+.mechanics {
+    --color: #91c074;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.mechanics::after {
+    content:"Mechanics";
+}
+.sound {
+    --color: #0e62a8;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.sound::after {
+    content:"Sound";
+}
+.coding {
+    --color: #445ea3;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.coding::after {
+    content:"Coding";
+}
+.visuals {
+    --color: #9988b9;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.visuals::after {
+    content:"Visuals";
+}
+.game-jam {
+    --color: #60397b;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.game-jam::after {
+    content:"Game Jam";
+}
+
