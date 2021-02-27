@@ -1,0 +1,72 @@
+/* Hide the link that should open and close the topnav on small screens */
+#topnav-container .icon {
+  display: none;
+}
+.topnav-routes-container-small
+{  
+  display: none !important;
+}
+.topnav-routes-container-small-expanded{
+  display: flex !important; 
+}
+
+@media only screen and (max-width: 640px){
+    .logo-container {
+        z-index: 2;
+        position: fixed;
+        top: 0;
+        --indent: calc(var(--logo-size) / 3);
+        left: calc(50% - var(--indent));
+        width: calc(var(--logo-size) / 1.5);
+        height: calc(var(--logo-size) / 1.5);
+    }
+    .logo-container-inner {
+        width: calc(100% - 10px);
+        height: calc(100% - 5px);
+        position: absolute;
+        left: 5px;
+        border-bottom: 5px solid var(--main-color);
+        border-right: 5px solid var(--main-color);
+        border-left: 5px solid var(--main-color);
+    }
+    .logo {
+        width: calc(var(--logo-size) /1.5 - 20px);
+        height: calc(var(--logo-size)/1.5 - 20px);
+        top: 5px;
+        left: 0;
+    }
+
+    #topnav-container {
+        flex-flow: column;
+    }
+    #topnav {
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    #topnav-routes-container-small
+    {  
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-top: 10px;
+    background-color: var(--main-color);
+    }
+    #topnav-container button.icon {
+    display: flex;
+    align-self: flex-end;
+    margin: 15px;
+
+    color: var(--secondary-color);
+    background-color: var(--main-color);
+    border: none;
+    }
+    .nav-item {
+        display: none;
+    }
+    .nav-item-small {
+        display: block;
+        margin-top: 5px;
+        margin-left: 10px;
+        margin-bottom: 5px;
+    }
+}

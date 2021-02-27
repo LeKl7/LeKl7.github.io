@@ -1,0 +1,34 @@
+@import 'root.css';
+@import 'animation.css';
+
+/* Logo */
+.logo-full-container {
+  position: relative;
+  width: var(--logo-size);
+  height: var(--logo-size);
+  padding-top: 5px;
+}
+.logo-full-container-inner {
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+}
+.logo-full {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: calc(var(--logo-size) - 10px);
+  height: calc(var(--logo-size) - 10px);
+
+  transition: transform 2s ease-in-out;
+}
+.logo-full-container:hover .logo-full-outer {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.logo-full-container:hover .logo-full-inner {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+.logo-full-outer > * {
+  font-weight: bold;
+}

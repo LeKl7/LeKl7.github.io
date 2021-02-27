@@ -3,6 +3,8 @@ import '../styles/tags.css';
 import Arrows from './Arrows'
 import ClickableImage from '../modules/ClickableImage';
 import QuickLinks from '../modules/QuickLinks';
+import WorkPercentage from "../modules/WorkPercentage"
+import {Video} from 'cloudinary-react';
 
 export default class ProjectCard extends Component {
     getCollaborationString = () => {
@@ -27,18 +29,15 @@ export default class ProjectCard extends Component {
             <div className="d-card">
             {/* Image Container */}
                 <div className="d-card-img-container" id={`imgContainer${this.props.project.key}`}>
-                            {/*  <img className="d-card-img-main d-card-img"
-                            src= {`${process.env.PUBLIC_URL}/assets/imgs/${this.props.project.name}/Main.png`} 
-                            alt="MainImage"
-                            /> */}
                             {/* Video */}
-                        <video className="d-card-img-main d-card-img" loop="loop" autoPlay muted controls>
-                            <source src={`${process.env.PUBLIC_URL}/assets/videos/${this.props.project.name}.mp4`} type="video/mp4"/></video>
+                        {/* <video className="d-card-img-main d-card-img" loop="loop" autoPlay muted controls>
+                            <source src={`${process.env.PUBLIC_URL}/assets/videos/${this.props.project.name}.mp4`} type="video/mp4"/></video> */}
+                        <Video className="d-card-img-main d-card-img" autoPlay muted controls cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
                         <div className="d-card-img-screenshots-container">
-                            <ClickableImage folder={this.props.project.name} imgName={"1.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
-                            <ClickableImage folder={this.props.project.name} imgName={"2.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
-                            <ClickableImage folder={this.props.project.name} imgName={"3.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
-                            <ClickableImage folder={this.props.project.name} imgName={"4.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage folder={this.props.project.folderName} imgName={"1.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage folder={this.props.project.folderName} imgName={"2.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage folder={this.props.project.folderName} imgName={"3.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage folder={this.props.project.folderName} imgName={"4.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
                         </div>
                 </div>
                 {/* Text Container */}
@@ -55,7 +54,7 @@ export default class ProjectCard extends Component {
                         })}
                         </div>
                     </div>
-                    {/* Prokect Description */}
+                    {/* Project Description */}
                     <div className="p p-body d-card-description">
                         {this.props.project.desctiption.map((p)=>{
                             return(
@@ -74,6 +73,8 @@ export default class ProjectCard extends Component {
                             })}
                         </div>}
                     </div>
+                    {/* Tasks */}
+                    <div style={{display: "flex", flexFlow:"row"}}>
                     <ul className="d-card-ul">
                     {this.props.project.tasks.map((task)=>{
                             this.renderQuickLinks();
@@ -82,6 +83,10 @@ export default class ProjectCard extends Component {
                             )
                     })}
                     </ul>
+                    {this.props.project.percentage &&
+                    <WorkPercentage perc={this.props.project.percentage} id={this.props.project.key}/>
+                    }
+                    </div>
                     {/* Quick Links Right */}
                     {this.props.project.quickLinks != null &&
                         <QuickLinks links={this.props.project.quickLinks}/>

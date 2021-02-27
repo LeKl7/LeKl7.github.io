@@ -1,6 +1,41 @@
 @import 'root.css';
 @import 'animation.css';
 
+/* Logo */
+.logo-container {
+  position: relative;
+  background-color: var(--secondary-color);
+  width: var(--logo-size);
+/*     min-width: var(--logo-size);
+*/    height: var(--logo-size);
+}
+.logo-container-inner {
+  border-bottom: 5px solid var(--main-color);
+  border-right: 5px solid var(--main-color);
+  width: calc(100% - 5px);
+  height: calc(100% - 5px);
+}
+.logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: calc(var(--logo-size) - 10px);
+  height: calc(var(--logo-size) - 10px);
+
+  transition: transform 2s ease-in-out;
+}
+.logo-container:hover .logo-outer {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.logo-container:hover .logo-inner {
+  -webkit-transform: rotate(-360deg);
+  transform: rotate(-360deg);
+}
+.logo-outer > * {
+  font-weight: bold;
+}
+
 /* top Navigation */
 #topnav-container{
   position: fixed;     /* Fixed topbar (stay in place on scroll and position relative to viewport) */
@@ -42,6 +77,11 @@ a:hover {
   text-decoration: none;
 }
 
+#dark-light-button {
+  border: none;
+  align-self: center;
+}
+
 #topnav-social-container{
     display: flex;
     flex-flow: row nowrap;
@@ -55,42 +95,3 @@ a:hover {
   display: flex !important;
 }
 
-
-/* Hide the link that should open and close the topnav on small screens */
-#topnav-container .icon {
-  display: none;
-}
-
-@media only screen and (max-width: 670px){
-  #topnav {
-    justify-content: flex-end;
-    overflow: hidden;
-    align-items: flex-start;
-  }
-  #topnav-routes-container {
-    display: flex;
-    flex-flow: column;
-  }
-
-  #topnav-container button.icon {
-    display: flex;
-    align-self: flex-end;
-    margin: 15px;
-    
-    color: var(--secondary-color);
-    background-color: var(--main-color);
-    border: none;
-  }
-  .nav-item {
-    margin-top: 10px;
-    margin-right: 10px;
-  }
-  .topnav-container-expanded{
-    border-bottom: 5px solid var(--secondary-color);
-    background-color: var(--main-color);
-  }
-  .topnav-expanded {
-    border: none !important;
-    height: auto !important;
-  }
-}

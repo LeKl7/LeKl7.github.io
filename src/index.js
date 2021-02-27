@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router, Route, useLocation } from "react-router-dom";
 //Import Bootstrap minimal CSS
+import './styles/root.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import RoutedApp from './App';
 

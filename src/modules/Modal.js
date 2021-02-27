@@ -3,6 +3,7 @@ import { FaTimes, FaCaretRight, FaCaretLeft} from "react-icons/fa";
 import '../styles/tags.css';
 import '../styles/modal.css';
 import '../styles/topnav.css';
+import {Image} from 'cloudinary-react';
 
 export default class Modal extends Component {
     prevImg = () => {
@@ -32,7 +33,8 @@ export default class Modal extends Component {
                 <div className="close-btn hvr-shutter-out-vertical-square hvr-shutter-out-vertical " onClick={this.props.closeModal}><FaTimes /></div>
                 <div className="prev hvr-shutter-out-vertical-square hvr-shutter-out-vertical " onClick={this.prevImg}><FaCaretLeft/></div>
                 <div className="modal-image">
-                    <img src={this.props.imgSource} className="d-img-card" style={{width:"100%", height:"auto"}} alt="Hero"/>
+                    {/* <img src={this.props.imgSource} className="d-img-card" style={{width:"100%", height:"auto"}} alt="Hero"/> */}
+                    <Image cloudName="lorenzkleiser" publicId={this.props.imgSource} className="d-img-card" style={{width:"100%", height:"auto"}} alt="Hero"/>
                 </div>
                 <div className="next hvr-shutter-out-vertical-square hvr-shutter-out-vertical" onClick={this.nextImg}><FaCaretRight/></div>
             </div>
