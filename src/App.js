@@ -127,21 +127,20 @@ class App extends Component {
         window.addEventListener("resize", this.handleResize);
     };
     componentDidUpdate() {
-        console.log("update");
     }
 
 
     getHeight = () => {
         let height = 0;
-        this.projectCollection.map( pc => {
-            pc.projects.map(p => {height += 1})
-        })
+        this.projectCollection.map( pc => 
+            pc.projects.map(p => height += 1)
+        )
         return height;
     }
     setHeight = (path) => {
         const rootElement = document.getElementById('root');
         const height = path === "/projects" ? this.getHeight() + 1 : 1;
-        rootElement.style.height = `${(height*100).toString()}%`;
+        rootElement.style.minHeight = `${(height*100).toString()}vh`;
     }
     onPathChange = (path) => {
         this.setState({ activePath: path }); /* Sets activePath which causes rerender which causes CSS to change */
