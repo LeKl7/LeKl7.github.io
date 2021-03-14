@@ -12,6 +12,7 @@ html body {
     --main-color: #111;
     --secondary-color: #e4e3e3;
     --logo-size: 150px;
+    --logo-size-big: 500px;
     --topnav-item-margin: 50px;
     background-color: var(--main-color);
     

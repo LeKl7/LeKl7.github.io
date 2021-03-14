@@ -8,6 +8,9 @@ export default class Contact extends React.Component {
         this.props.setBodyPadding();
     }
     render() {
+        this.onClick = () => {
+            window.open('mailto:lenz.kleiser@bluewin.ch?');
+        }
         return (        
             <section className="d-body">
             <div className="d-card-wrapper">
@@ -18,8 +21,8 @@ export default class Contact extends React.Component {
                     </div>
                     <div className="p p-body d-card-description">
                     <div style={{marginBottom:"13px"}}>Feel free to write me an email: 
-                    <a href="https://www.linkedin.com" className="topnav-social hvr-shutter-out-vertical-square">
-                    <FaEnvelope/> </a> </div>
+                    <div onClick={this.onClick} className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
+                    <FaEnvelope/> </div> </div>
                     </div>
                     <SocialMedia style={{alignSelf: "flex-end"}}/>
                     </div>

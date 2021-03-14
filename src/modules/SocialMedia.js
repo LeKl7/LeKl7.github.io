@@ -6,13 +6,13 @@ export default class SocialMedia extends React.Component {
     render() {
         return (
             <div id="topnav-social-container" style={this.props.style}>
-            <a href="#1" className="topnav-social hvr-shutter-out-vertical-square">
+            <a href="https://www.github.com" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
             <FaGithub />
             </a>
-            <a href="https://www.twitter.com" className="topnav-social hvr-shutter-out-vertical-square">
+            <a href="https://www.twitter.com" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
             <FaTwitter />
             </a>
-            <a href="https://www.linkedin.com" className="topnav-social hvr-shutter-out-vertical-square">
+            <a href="https://www.linkedin.com" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
             <FaLinkedinIn/>
             </a>
             </div>

@@ -11,8 +11,9 @@ export default class ProjectCard extends Component {
         let str = "Collaboration with: ";
         this.props.project.collaborators.map(c => {
             str += c.name;
-            if(!this.props.project.collaborators.indexOf(c, 0) == this.props.project.collaborators.length -1)
+            if(!this.props.project.collaborators.indexOf(c, 0) === this.props.project.collaborators.length -1)
                 str += ", ";
+            return str;
         });
         return str;
     };
@@ -67,8 +68,11 @@ export default class ProjectCard extends Component {
                             Collaboration with: 
                             {this.props.project.collaborators.map(c => {
                                 return (
-                                    <a className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" href={c.href} target="_blank" rel='noreferrer'
+                                    c.href != null ?
+                                        <a className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" href={c.href} target="_blank" rel='noreferrer'
                                         style={{verticalAlign: "top", marginLeft: "10px"}} key={this.props.project.collaborators.indexOf(c)}> {c.name} </a>
+                                        :
+                                        <p style={{verticalAlign: "top", marginLeft: "10px", display: "inline"}} key={this.props.project.collaborators.indexOf(c)}> {c.name} </p> 
                                 );
                             })}
                         </div>}

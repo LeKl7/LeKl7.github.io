@@ -27,7 +27,7 @@ class TopNav extends React.Component {
         return (
             <div id="topnav-container" className={`${this.props.navExpanded ? "topnav-container-expanded" :""}`}>
                 {/* Logo */}
-                <Link className="logo-container" to="/" onClick={() => this.props.onPathChange("/about")}>
+                <Link className="logo-container" to="/" onClick={() => this.props.onPathChange("/")}>
                     <div className="logo-container-inner">
                         <Logo darkMode={this.props.darkMode}/>
                     </div>

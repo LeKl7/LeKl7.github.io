@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch, useLocation, Redirect } from "react-router-dom";
 import Topnav from './modules/Topnav';
 import Modal from './modules/Modal';
+import Home from './pages/Home';
 import About from './pages/About';
 import { NoMatch } from './pages/NoMatch';
 import Projects from './pages/Projects';
@@ -51,7 +52,7 @@ class App extends Component {
                     `This game was created by 18 game design students in two weeks for one of our class modules. The art style and music was partially inspired by a mix of all things 80s and 2000s.`,
                     `Enter a world of chaos and confusion while trying to get rid of a corpse, that might kind of be your fault. But do try to bond with your friends as well, before you all have to go your separate ways.`],
                     tasks: ["Two minigame mechanics", "System programming", "Dialogue programming"],
-                    collaborators: [{name: "First year GameDesign students", href:""}],
+                    collaborators: [{name: "First year GameDesign students"}],
                     quickLinks:[{label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=9jPSSWCKI5Y&feature=emb_title&ab_channel=BackpainGames"}],
                     key: 0
                     },
@@ -73,10 +74,9 @@ class App extends Component {
                     folderName: "toomuch",
                     date: "2020",
                     tags: ["mechanics", "coding"],
-                    desctiption: [`Heels ‘n Feels is a queer, kinda furry visual novel with mini games about the perils of heelying too close to the sun. If you know that heelys are way cooler than skateboards and love to read a shit-ton of dialogue, then this games is for you!`,
-                    `This game was created by 18 game design students in two weeks for one of our class modules. The art style and music was partially inspired by a mix of all things 80s and 2000s.`,
-                    `Enter a world of chaos and confusion while trying to get rid of a corpse, that might kind of be your fault. But do try to bond with your friends as well, before you all have to go your separate ways.`],
-                    tasks: ["Two minigame mechanics", "System programming"],
+                    desctiption: [`Do you ever feel overwhelmed by too much affection? I know, happens to me all the time too! Slap your obnoxious punter away before they can reach your heart and trap it forerver.`,
+                    `In this project, I created a game given the theme "I have nothing, if I don't have you". It was programmed in Processing.`],
+                    tasks: ["Programming in Processing"],
                     percentage: 100,
                     key: 2
                     },
@@ -151,7 +151,7 @@ class App extends Component {
 
     setBodyPaddig = (expanded) => {
         const body = document.querySelector('.d-body');
-        body.style.paddingTop = (expanded ?? this.state.navExpanded) ? '120px' : "75px";
+        if(body) body.style.paddingTop = (expanded ?? this.state.navExpanded) ? '120px' : "75px";
     }
     onNavExpand = () => {
         this.setBodyPaddig(!this.state.navExpanded);
@@ -188,7 +188,7 @@ class App extends Component {
             </div>  
             <Modal imgSource={this.state.modalImgSource} openModal={this.openModal} closeModal={this.closeModal} setImgSource={(e) => this.setImgSource(e)}/>
             <Switch>
-                <Route exact path="/"> <Redirect to="/about" /></Route>
+                <Route exact path="/"render={()=><Home setBodyPadding={this.setBodyPaddig}/>}/>
                 <Route path="/about" render={()=><About setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route path="/projects" render={()=><Projects projectCollection={this.projectCollection} navExpanded={this.state.navExpanded} setBodyPadding={this.setBodyPaddig} onImgClick={(string) => this.openModal(string)}/>} />
                 <Route path="/contact" render={()=><Contact setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
