@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Link, withRouter} from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, withRouter} from "react-router-dom";
 import '../styles/topnav.css';
 import '../styles/topnavSmall.css';
 import Logo from './Logo';

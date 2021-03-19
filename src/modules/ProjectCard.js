@@ -17,6 +17,7 @@ export default class ProjectCard extends Component {
         });
         return str;
     };
+
     render() {
         return (
             <div className="d-card-wrapper">
