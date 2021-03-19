@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, withRouter} from "react-router-dom";
+import { BrowserRouter as Link, withRouter} from "react-router-dom";
 import '../styles/topnav.css';
 import '../styles/topnavSmall.css';
 import Logo from './Logo';
@@ -45,7 +45,7 @@ class TopNav extends React.Component {
                     <DarkLightMode darkMode={this.props.darkMode} changeMode={this.props.changeMode} style={{ margin: "0px", marginLeft: "var(--topnav-item-margin)"}}/>
                     </div>
                 {/* Social Media */}
-                    <SocialMedia />
+                    {/* <SocialMedia /> */}
                 </div>
             </div>
         );
@@ -75,7 +75,7 @@ class TopNavSmall extends React.Component {
                 <DarkLightMode darkMode={this.props.darkMode} changeMode={this.props.changeMode}/>
                 </div>
                 {/* Social Media */}
-                    <SocialMedia />
+                    {/* <SocialMedia /> */}
                 </div>
                 {/* Routes */}
                 <div className={`d-card topnav-routes-container-small ${this.props.navExpanded ? "topnav-routes-container-small-expanded" :""}`}style={{background: "var(--main-color)", marginTop: "10px", marginLeft: "5%", marginRight: "5%"}}>

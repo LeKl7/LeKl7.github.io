@@ -17,13 +17,6 @@ export default class ProjectCard extends Component {
         });
         return str;
     };
-
-    renderQuickLinks(left) {
-        const img = document.getElementById(`imgContainer${this.props.project.key}`);
-        const txt = document.getElementById(`textContainer${this.props.project.key}`);
-        /* console.log(img.clientWidth);
-        console.log(txt.clientWidth); */
-    }
     render() {
         return (
             <div className="d-card-wrapper">
@@ -33,7 +26,7 @@ export default class ProjectCard extends Component {
                             {/* Video */}
                         {/* <video className="d-card-img-main d-card-img" loop="loop" autoPlay muted controls>
                             <source src={`${process.env.PUBLIC_URL}/assets/videos/${this.props.project.name}.mp4`} type="video/mp4"/></video> */}
-                        <Video className="d-card-img-main d-card-img" autoPlay muted controls cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
+                        <Video className="d-card-img-main d-card-img" autoPlay muted controls webkit-playsinline playsinline cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
                         <div className="d-card-img-screenshots-container">
                             <ClickableImage folder={this.props.project.folderName} imgName={"1.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
                             <ClickableImage folder={this.props.project.folderName} imgName={"2.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
@@ -81,7 +74,6 @@ export default class ProjectCard extends Component {
                     <div style={{display: "flex", flexFlow:"row"}}>
                     <ul className="d-card-ul">
                     {this.props.project.tasks.map((task)=>{
-                            this.renderQuickLinks();
                             return(
                                 <li className={`p d-card-list`} key={this.props.project.tasks.indexOf(task, 0)}>{task}</li>
                             )

@@ -24,7 +24,7 @@ export default class Contact extends React.Component {
                     <div onClick={this.onClick} className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
                     <FaEnvelope/> </div> </div>
                     </div>
-                    <SocialMedia style={{alignSelf: "flex-end"}}/>
+                    {/* <SocialMedia style={{alignSelf: "flex-end"}}/> */}
                     </div>
             </div></div>
         </section>

@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation, Redirect } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
 import Topnav from './modules/Topnav';
 import Modal from './modules/Modal';
 import Home from './pages/Home';
@@ -188,7 +188,7 @@ class App extends Component {
             </div>  
             <Modal imgSource={this.state.modalImgSource} openModal={this.openModal} closeModal={this.closeModal} setImgSource={(e) => this.setImgSource(e)}/>
             <Switch>
-                <Route exact path="/"render={()=><Home setBodyPadding={this.setBodyPaddig}/>}/>
+                <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig}/>}/>
                 <Route path="/about" render={()=><About setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route path="/projects" render={()=><Projects projectCollection={this.projectCollection} navExpanded={this.state.navExpanded} setBodyPadding={this.setBodyPaddig} onImgClick={(string) => this.openModal(string)}/>} />
                 <Route path="/contact" render={()=><Contact setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
