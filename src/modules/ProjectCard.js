@@ -27,7 +27,7 @@ export default class ProjectCard extends Component {
                             {/* Video */}
                         {/* <video className="d-card-img-main d-card-img" loop="loop" autoPlay muted controls>
                             <source src={`${process.env.PUBLIC_URL}/assets/videos/${this.props.project.name}.mp4`} type="video/mp4"/></video> */}
-                        <Video className="d-card-img-main d-card-img" autoPlay muted controls webkit-playsinline playsinline cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
+                        <Video className="d-card-img-main d-card-img" autoPlay muted controls webkit-playsinline="true" playsInline cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
                         <div className="d-card-img-screenshots-container">
                             <ClickableImage folder={this.props.project.folderName} imgName={"1.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
                             <ClickableImage folder={this.props.project.folderName} imgName={"2.png"} onImgClick={(string) => this.props.onImgClick(string)}/>

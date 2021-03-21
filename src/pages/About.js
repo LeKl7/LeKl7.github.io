@@ -28,7 +28,7 @@ export default class About extends React.Component {
                     <div className="d-card-text-container">
                         <div className="p p-body d-card-description" style={{lineHeight: "1.8"}}>
                             <div style={{marginBottom:"13px"}}>
-                                I’m a Swiss developper currently studying Game Design at the ZHdK in Zürich and Informatics at the FernUni in Hagen.
+                                I’m a Swiss developer currently studying Game Design at the ZHdK in Zürich and Informatics at the FernUni in Hagen.
                             </div>
                             <div style={{marginBottom:"13px"}}>
                                 My greatest fascination lies within the possibility of 
