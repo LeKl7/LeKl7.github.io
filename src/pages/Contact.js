@@ -20,11 +20,11 @@ export default class Contact extends React.Component {
                         <h1 className="p header d-card-title">Contact me </h1>
                     </div>
                     <div className="p p-body d-card-description">
-                    <div style={{marginBottom:"13px"}}>Feel free to write me an email: 
+                    <div style={{marginBottom:"13px"}}>Feel free to write me an email:
                     <div onClick={this.onClick} className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
-                    <FaEnvelope/> </div> </div>
+                    <FaEnvelope style={{marginRight: "10px"}}/>lenz.kleiser@bluewin.ch</div> </div>
                     </div>
-                    {/* <SocialMedia style={{alignSelf: "flex-end"}}/> */}
+                    <SocialMedia style={{alignSelf: "flex-end"}}/>
                     </div>
             </div></div>
         </section>

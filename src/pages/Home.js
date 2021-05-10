@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/styles.css';
 import LogoFull from '../modules/LogoFull'
+import { BrowserRouter as Router, Route, Link, withRouter} from "react-router-dom";
 
 export default class Home extends React.Component {
     componentDidMount() {
@@ -25,13 +26,24 @@ export default class Home extends React.Component {
             <LogoFull/>
                 <div className="d-card-text-container">
                     <div className="p p-body d-card-description" style={{alignSelf : "center", marginLeft: "0px"}}>
-                      Hi! I'm Lorenz. I primarily do 
+                      Hi! I'm 
+                      <Link to={"/about"} 
+                      className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px"}} 
+                      onClick={() => this.props.onPathChange("/about")}> Lorenz </Link>
+                      . I primarily do 
                       <div className={`p d-card-tag coding`} style={{marginLeft : "0.3em"}}></div> 
                       and 
                       <div className={`p d-card-tag game-design`} style={{marginLeft : "0.3em"}}></div> 
                       .
                     </div>
+                    <div className="p p-body d-card-description" style={{alignSelf : "center", marginLeft: "0px"}}>
+                      Check out my 
+                      <Link to={"/projects"} 
+                      className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px"}} 
+                      onClick={() => this.props.onPathChange("/projects")}>projects</Link>
+                      !
                     </div>
+                  </div>
             </div>
             </section>
         );

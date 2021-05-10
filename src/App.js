@@ -66,7 +66,7 @@ class App extends Component {
                     `Play with your family, friends or  frenemies and find out who is  the better (hangry) frog!`],
                     tasks: ["Level Design", "Entire programming", "Sondtracks", "Sound Effects"],
                     percentage: 50,
-                    collaborators: [{name: "@lunaelaine", href:""}],
+                    collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
                     quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/hangry-frogs-on-ice"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=cFMsNZKugJg&feature=emb_title"}],
                     key: 1
                     }, {
@@ -90,7 +90,7 @@ class App extends Component {
                     `"Send NEWS!" is a realtime chat application, playable in the browser, in which up to 10 people can talk to each other.`],
                     tasks: ["Text shader", "Game programming", "Webserver setup", "Sound Design"],
                     percentage: 50,
-                    collaborators: [{name: "@lunaelaine", href:""}],
+                    collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
                     key: 3
                     }, 
                 ]
@@ -106,7 +106,7 @@ class App extends Component {
                     `Choose your stand and don’t let the other side take over the Universe!`],
                     tasks: ["Developement of concept", "Coding of the entire project"],
                     percentage: 33,
-                    collaborators: [{name: "@manolo", href:"https://manolowi.itch.io/"}, {name:"@luatschia", href:"https://lulatschia.itch.io/"}],
+                    collaborators: [{name: "@ManuelWirth", href:"https://www.manuelwirth.ch/"}, {name:"@luatschia", href:"https://lulatschia.myportfolio.com/"}],
                     quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
                     key: 4
                     }]
@@ -188,7 +188,7 @@ class App extends Component {
             </div>  
             <Modal imgSource={this.state.modalImgSource} openModal={this.openModal} closeModal={this.closeModal} setImgSource={(e) => this.setImgSource(e)}/>
             <Switch>
-                <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig}/>}/>
+                <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig} onPathChange={this.onPathChange}/>}/>
                 <Route path="/about" render={()=><About setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route path="/projects" render={()=><Projects projectCollection={this.projectCollection} navExpanded={this.state.navExpanded} setBodyPadding={this.setBodyPaddig} onImgClick={(string) => this.openModal(string)}/>} />
                 <Route path="/contact" render={()=><Contact setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>

@@ -45,7 +45,7 @@ class TopNav extends React.Component {
                     <DarkLightMode darkMode={this.props.darkMode} changeMode={this.props.changeMode} style={{ margin: "0px", marginLeft: "var(--topnav-item-margin)"}}/>
                     </div>
                 {/* Social Media */}
-                    {/* <SocialMedia /> */}
+                    <SocialMedia />
                 </div>
             </div>
         );
