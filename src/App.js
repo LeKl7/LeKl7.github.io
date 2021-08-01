@@ -39,7 +39,39 @@ class App extends Component {
             modalImgSource: "",
             darkMode: true
         } 
-        this.projectCollection =[
+        this.projectCollection = [
+/*             {
+                title: "Client Projects",
+                projects: [{
+                    name: "Ugly's Magic",
+                    folderName: "uglysmagic",
+                    date: "2021",
+                    tags: ["concept", "coding", "visuals"],
+                    desctiption: [`This project is an hommage to the old 'Ugly' nightclub in Zürich. The former owner, Ulrich Steinle, approached me to make a game installation for his 50th anniversary exibition in Richterswil.`, 
+                    `Bring people to the 'Ugly' with good music! You play as the 'U' from 'Ugly' to lure as many cars as possible into the nightclub before the morning.`,
+                    `This installation was exhibited for one month.`],
+                    tasks: ["Creation of the installation."],
+                    percentage: 100,
+                    quickLinks:[{label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
+                    key: 0
+                    }]
+            }, */
+            {
+                title: "Personal Projects",
+                projects: [{
+                    name: "Planethesis",
+                    folderName: "planethesis",
+                    date: "2020",
+                    tags: ["concept", "coding", "game-design", "game-jam"],
+                    desctiption: [`A war is raging between Church and Science, but only one party can come through as victorious! Decide whether the world will follow the holy path alongsit or trust in the works of Galileo Galilei.`, 
+                    `Choose your stand and don’t let the other side take over the Universe!`],
+                    tasks: ["Developement of concept", "Coding of the entire project"],
+                    percentage: 33,
+                    collaborators: [{name: "@ManuelWirth", href:"https://www.manuelwirth.ch/"}, {name:"@luatschia", href:"https://lulatschia.myportfolio.com/"}],
+                    quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
+                    key: 1
+                    }]
+            },
             {
                 title: "ZHdK Projects",
                 projects: [
@@ -54,7 +86,7 @@ class App extends Component {
                     tasks: ["Two minigame mechanics", "System programming", "Dialogue programming"],
                     collaborators: [{name: "First year GameDesign students"}],
                     quickLinks:[{label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=9jPSSWCKI5Y&feature=emb_title&ab_channel=BackpainGames"}],
-                    key: 0
+                    key: 2
                     },
                     {
                     name: "Hangry Frogs - On Ice",
@@ -68,7 +100,7 @@ class App extends Component {
                     percentage: 50,
                     collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
                     quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/hangry-frogs-on-ice"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=cFMsNZKugJg&feature=emb_title"}],
-                    key: 1
+                    key: 3
                     }, {
                     name: "Too MUCH!",
                     folderName: "toomuch",
@@ -78,7 +110,7 @@ class App extends Component {
                     `In this project, I created a game given the theme "I have nothing, if I don't have you". It was programmed in Processing.`],
                     tasks: ["Programming in Processing"],
                     percentage: 100,
-                    key: 2
+                    key: 4
                     },
                     {
                     name: "Send NEWS!",
@@ -91,26 +123,24 @@ class App extends Component {
                     tasks: ["Text shader", "Game programming", "Webserver setup", "Sound Design"],
                     percentage: 50,
                     collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
-                    key: 3
+                    key: 5
+                    },
+                    {
+                    name: "Project Zagreus",
+                    folderName: "projectzagreus",
+                    date: "2021",
+                    tags: ["concept", "storytelling", "coding"],
+                    desctiption: [`RRI Inc. is a company specialised in the investigation of shipwrecks and retrieving blackboxes for insurance and criminal investigation purposes. 
+                    You have been working for the company for years, but never experienced a case like this one. An unknown ship has sunken under strange circumstances.`,
+                    `Dive into the claustrophobic corridors of the sunken colossus to find out the truth. Experience one of your colleagues turning against you, while unknown creatures lurk in the dark abyss of the sea.`],
+                    tasks: ["Story writing"],
+                    percentage: 25,
+                    collaborators: [{name: "@milkimoone", href:"https://www.instagram.com/milkimoone"},{name: "@AnjaSchrodin", href:"https://www.instagram.com/lyannjohnes"},{name: "@SamuelKnüsel", href:"https://jestercap.itch.io/"}, {name: "@RobinGood", href:"https://godor.itch.io/"}],
+                    quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/project-zagreus"}],
+                    key: 6
                     }, 
                 ]
             },
-            {
-                title: "Personal Projects",
-                projects: [{
-                    name: "Planethesis",
-                    folderName: "planethesis",
-                    date: "2020",
-                    tags: ["concept", "coding", "game-design", "game-jam"],
-                    desctiption: [`A war is raging between Church and Science, but only one party can come through as victorious! Decide whether the world will follow the holy path alongsit or trust in the works of Galileo Galilei.`, 
-                    `Choose your stand and don’t let the other side take over the Universe!`],
-                    tasks: ["Developement of concept", "Coding of the entire project"],
-                    percentage: 33,
-                    collaborators: [{name: "@ManuelWirth", href:"https://www.manuelwirth.ch/"}, {name:"@luatschia", href:"https://lulatschia.myportfolio.com/"}],
-                    quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
-                    key: 4
-                    }]
-            }
         ]
         this.defaultBodyPadding = 0;
     }
