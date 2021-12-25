@@ -95,4 +95,13 @@
 .game-jam::after {
     content:"Game Jam";
 }
+.extension {
+    --color: #777777;
+    background-color: var(--color);
+    border-color: var(--color);
+    color: var(--color);
+}
+.extension::after {
+    content:"Extension";
+}
 

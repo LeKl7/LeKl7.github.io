@@ -95,3 +95,6 @@ a:hover {
   display: flex !important;
 }
 
+.rotate {
+  writing-mode: vertical-lr;
+}

@@ -10,6 +10,10 @@
     background-color: inherit;
     margin: calc(var(--logo-size) / 2 + 15px) 5%;
 }
+.d-card-wrapper-first {
+    border-top: 2px solid var(--secondary-color);
+    padding-top: 20px;
+}
 .d-card {
     border-top: 2px solid var(--secondary-color);
     border-bottom: 2px solid var(--secondary-color);
@@ -41,7 +45,23 @@
     margin-top: 10px;
     position: relative;
     width: 100%;
-  }
+}
+
+.video-responsive {
+overflow: hidden;
+padding-bottom: 56.25%;
+position: relative;
+height: 0;
+}
+
+.video-responsive iframe {
+left: 0;
+top: 0;
+height: 100%;
+width: 100%;
+position: absolute;
+}
+  
 .d-card-img-main {
     width: 100% !important;
     display: inline-block;
@@ -60,7 +80,7 @@
 }
 
 .d-card-text-container {
-    /* flex: 1 0 0; */
+    flex: 1 0 40%;
     display: flex;
     flex-flow: column nowrap;
     margin: 10px
@@ -90,7 +110,12 @@
     flex-flow: row;
     align-items: center;
 }
-
+.tag-filter-container {
+    padding-top: 5px;
+}
+.tag-filter-container:hover {
+    cursor:pointer;
+   }
 
 
 @media only screen and (max-width: 640px) {

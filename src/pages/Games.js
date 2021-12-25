@@ -11,8 +11,7 @@ export default class Projects extends React.Component {
         return (        
             <>
             <section className="d-body" id="0">
-                <OverviewCard 
-                    projectCollection={this.props.projectCollection} 
+                <OverviewCard projectCollection={this.props.projectCollection} 
                     key={0} 
                     onFilterToggle={()=> this.props.onFilterToggle()} 
                     onFilterChange={(string)=> this.props.onFilterChange(string)} 

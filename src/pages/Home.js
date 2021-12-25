@@ -39,6 +39,10 @@ export default class Home extends React.Component {
                     <div className="p p-body d-card-description" style={{alignSelf : "center", marginLeft: "0px"}}>
                       Check out my 
                       <Link to={"/projects"} 
+                      className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px", marginRight:"5px"}} 
+                      onClick={() => this.props.onPathChange("/games")}>games</Link>
+                      and 
+                      <Link to={"/projects"} 
                       className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px"}} 
                       onClick={() => this.props.onPathChange("/projects")}>projects</Link>
                       !

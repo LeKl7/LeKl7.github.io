@@ -5,12 +5,14 @@ import Modal from './modules/Modal';
 import Home from './pages/Home';
 import About from './pages/About';
 import { NoMatch } from './pages/NoMatch';
+import Games from './pages/Games';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 
 class App extends Component {
     constructor(props) {
         super(props);
+        /* This lists all the possible get requests. */
         this.state = {
             activePath: this.props.path,
             items: [
@@ -18,33 +20,45 @@ class App extends Component {
                 path: '/about',
                 name: 'About',
                 css: '',
-                key: 2
+                key: 0
+                },
+                {
+                path: '/games',
+                name: 'Games',
+                css: '',
+                key: 1
                 },
                 {
                 path: '/projects',
                 name: 'Projects',
                 css: '',
-                key: 3
+                key: 2
                 },
                 {
                 path: '/contact',
                 name: 'Contact',
                 css: '',
-                key: 4
+                key: 3
                 }
             ],
             windowWidth: window.innerWidth,
             navExpanded: false,
             modalOpen: false,
             modalImgSource: "",
+            filterOpen: false,
+            filter: [],
             darkMode: true
         } 
-        this.projectCollection = [
-/*             {
-                title: "Client Projects",
+        /* This lists all the games that can be viewed under the game tab. */
+        this.gameCollection = [
+            {
+                title: "Client Games",
                 projects: [{
                     name: "Ugly's Magic",
                     folderName: "uglysmagic",
+                    video: true,
+                    videoEmbedID: "Nnr_Eq-ufsQ",
+                    picsDescr: ["Player collected a record (Screenshot).", "Installation from the side.", "Installation from the front.", "Advertisement brochure for the event."],
                     date: "2021",
                     tags: ["concept", "coding", "visuals"],
                     desctiption: [`This project is an hommage to the old 'Ugly' nightclub in Zürich. The former owner, Ulrich Steinle, approached me to make a game installation for his 50th anniversary exibition in Richterswil.`, 
@@ -52,45 +66,94 @@ class App extends Component {
                     `This installation was exhibited for one month.`],
                     tasks: ["Creation of the installation."],
                     percentage: 100,
-                    quickLinks:[{label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
-                    key: 0
+                    quickLinks:[{label: "Trailer", href:"https://youtu.be/D4yMdezHH-U"},
+                        {label: "Gameplay", href:"https://youtu.be/w3hPMI0cnWw"}],
+                    key: 1
                     }]
-            }, */
+            },
             {
-                title: "Personal Projects",
+                title: "Personal Games",
                 projects: [{
                     name: "Planethesis",
                     folderName: "planethesis",
+                    videoEmbedID: "Dd6DzHlILEk",
+                    video: true,
+                    picsDescr: ["Start Screen (Screenshot).", "Mid Game (Screenshot).", "Mid Game (Screenshot).", "Credits (Screenshot)."],
                     date: "2020",
                     tags: ["concept", "coding", "game-design", "game-jam"],
                     desctiption: [`A war is raging between Church and Science, but only one party can come through as victorious! Decide whether the world will follow the holy path alongsit or trust in the works of Galileo Galilei.`, 
                     `Choose your stand and don’t let the other side take over the Universe!`],
                     tasks: ["Developement of concept", "Coding of the entire project"],
                     percentage: 33,
-                    collaborators: [{name: "@ManuelWirth", href:"https://www.manuelwirth.ch/"}, {name:"@luatschia", href:"https://lulatschia.myportfolio.com/"}],
+                    collaborators: [{name: "@ManuelWirth", href:"https://www.manuelwirth.ch/"}, {name:"@lulatschia", href:"https://lulatschia.myportfolio.com/"}],
                     quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
-                    key: 1
+                    key: 2
                     }]
             },
             {
-                title: "ZHdK Projects",
+                title: "ZHdK Games",
                 projects: [
                     {
-                    name: "Heels 'n Feels",
-                    folderName: "heelsnfeels",
-                    date: "2020",
-                    tags: ["mechanics", "coding"],
-                    desctiption: [`Heels ‘n Feels is a queer, kinda furry visual novel with mini games about the perils of heelying too close to the sun. If you know that heelys are way cooler than skateboards and love to read a shit-ton of dialogue, then this games is for you!`,
-                    `This game was created by 18 game design students in two weeks for one of our class modules. The art style and music was partially inspired by a mix of all things 80s and 2000s.`,
-                    `Enter a world of chaos and confusion while trying to get rid of a corpse, that might kind of be your fault. But do try to bond with your friends as well, before you all have to go your separate ways.`],
-                    tasks: ["Two minigame mechanics", "System programming", "Dialogue programming"],
-                    collaborators: [{name: "First year GameDesign students"}],
-                    quickLinks:[{label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=9jPSSWCKI5Y&feature=emb_title&ab_channel=BackpainGames"}],
-                    key: 2
+                        name: "Heels 'n Feels",
+                        folderName: "heelsnfeels",
+                        video: true,
+                        videoEmbedID: "g-did6fWnMw",
+                        picsDescr: ["'Trunk Tetris' Minigame (Screenshot).", "Heelyin' (Screenshot).", "Dialogue Sequence (Screenshot).", "Dialogue Sequence (Screenshot)."],
+                        date: "2020",
+                        tags: ["mechanics", "coding"],
+                        desctiption: [`Heels ‘n Feels is a queer, kinda furry visual novel with mini games about the perils of heelying too close to the sun. If you know that heelys are way cooler than skateboards and love to read a shit-ton of dialogue, then this games is for you!`,
+                        `This game was created by 18 game design students in two weeks for one of our class modules. The art style and music was partially inspired by a mix of all things 80s and 2000s.`,
+                        `Enter a world of chaos and confusion while trying to get rid of a corpse, that might kind of be your fault. But do try to bond with your friends as well, before you all have to go your separate ways.`],
+                        tasks: ["Two minigame mechanics", "System programming", "Dialogue programming"],
+                        collaborators: [{name: "First year GameDesign students"}],
+                        quickLinks:[{label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=9jPSSWCKI5Y&feature=emb_title&ab_channel=BackpainGames"}],
+                        key: 3
                     },
                     {
-                    name: "Hangry Frogs - On Ice",
+                        name: "THAR",
+                        claim: "- Secrets Underneath The Sand",
+                        folderName: "thar",
+                        videoEmbedID: "OXOAGnzHjcg",
+                        video: true,
+                        picsDescr: ["Title Screen.", "Controlling SMALL unit (Screenshot).", "Tutorial Slides (Screenshot).", "Shooting SMALL unit (Screenshot)."],
+                        date: "2021",
+                        tags: ["mechanics", "coding"],
+                        desctiption: [`THAR - Secrets beneath the sand.`,
+                        `To survive the blazing heat of the Thar desert, take control over a robo and steer your way through the ancient ruins, solve puzzles and discover its secrets.`,
+                        `THAR is a VR game created for the Oculus Quest 1 and 2.`],
+                        tasks: ["Mechanics", "System programming", "Shaders"],
+                        collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
+                        percentage: 50,
+                        quickLinks:[{label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, //!Change Download!
+                            {label: "Trailer", href:"https://youtu.be/tgOlhzYOIzU"},
+                            {label: "Gameplay", href:"https://youtu.be/Mennis5pnaE"}
+                        ], 
+                        key: 4
+                    },
+                    {
+                        name: "Sansù",
+                        claim: "VS Lords of the meat",
+                        folderName: "sansu",
+                        videoEmbedID: "q1JuzaXRAFU",
+                        video: true,
+                        picsDescr: ["Title Screen.", "Math Attack (Screenshot).", "Walking (Screenshot).", "Credits."],
+                        date: "2021",
+                        tags: ["coding", "game-jam"],
+                        desctiption: [`Sansū VS Lords of the meat is a hack'n'slash game, combined with a math fight mechanic. It was produced during an intern game jam (3 days) at the Zürich University of the Arts, with a team of 14 game design students.`],
+                        tasks: ["System Programming"],
+                        collaborators: [{name: "GameDesign Students"}],
+                        quickLinks:[{label: "Download", href:"https://leapero.itch.io/sansu-vs-lords-of-the-meat"}, 
+                            {label: "Trailer", href:"https://youtu.be/V6LqDupIPjg"},
+                            {label: "Gameplay", href:"https://youtu.be/6iDEsS5UKgc"}],
+                        key: 5
+                    },
+                    {
+                    name: "Hangry Frogs",
+                    claim: "- On Ice",
                     folderName: "hangryfrogs",
+                    video: true,
+                    videoEmbedID: "wwUVa2WuMmk",
+                    picsDescr: ["Main Menu (Screenshot).", "Intro Cutscene (Screenshot).", "Midgame (Screenshot).", "End Screen (Screenshot)."],
                     date: "2020",
                     tags: ["concept", "coding", "sound"],
                     desctiption: [`As soon as winter dawns, the fierce fight for the last food begins.`,
@@ -100,10 +163,92 @@ class App extends Component {
                     percentage: 50,
                     collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
                     quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/hangry-frogs-on-ice"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=cFMsNZKugJg&feature=emb_title"}],
+                    key: 6
+                    },
+                    {
+                    name: "Project Zagreus",
+                    folderName: "projectzagreus",
+                    video: true,
+                    videoEmbedID: "C1-K_TAA1tQ",
+                    picsDescr: ["Midgame (Screenshot).", "Midgame (Screenshot).", "Midgame (Screenshot).", "Leviathan (Artwork)."],
+                    date: "2021",
+                    tags: ["concept", "storytelling", "coding"],
+                    desctiption: [`RRI Inc. is a company specialised in the investigation of shipwrecks and retrieving blackboxes for insurance and criminal investigation purposes. 
+                    You have been working for the company for years, but never experienced a case like this one. An unknown ship has sunken under strange circumstances.`,
+                    `Dive into the claustrophobic corridors of the sunken colossus to find out the truth. Experience one of your colleagues turning against you, while unknown creatures lurk in the dark abyss of the sea.`],
+                    tasks: ["Story writing"],
+                    percentage: 25,
+                    collaborators: [{name: "@milkimoone", href:"https://www.instagram.com/milkimoone"},{name: "@AnjaSchrodin", href:"https://www.instagram.com/lyannjohnes"},{name: "@SamuelKnüsel", href:"https://jestercap.itch.io/"}, {name: "@RobinGood", href:"https://godor.itch.io/"}],
+                    quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/project-zagreus"}],
+                    key: 7
+                    }, 
+                ]
+            },
+        ]
+        
+        /* This lists all the games that can be viewed under the projects tab */
+        this.projectCollection = [
+            {
+                title: "Unity Extensions",
+                projects: [
+                    {
+                        name: "Noise Generator", // ! To be created!
+                        folderName: "noisegenerator",
+                        video: true,
+                        videoEmbedID: "-",
+                        picsDescr: ["", "", "", ""],
+                        date: "2021",
+                        tags: ["coding", "extension"],
+                        desctiption: [
+                            `...`, 
+                            `...`],
+                        tasks: ["A fully modular noise Generation running on GPU", "2D and 3D texture management"],
+                        percentage: 100,
+                        quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Showcase", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
+                        key: 1
+                    },
+                    {
+                        name: "Lazy Logging", // ! To be created!
+                        folderName: "lazylogging",
+                        date: "2021",                        
+                        video: true,
+                        videoEmbedID: "-",
+                        picsDescr: ["", "", "", ""], 
+                        tags: ["coding", "extension"],
+                        desctiption: [
+                            `...`, 
+                            `...`],
+                        tasks: ["Developement of a new console window"],
+                        percentage: 100,
+                        quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Showcase", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
+                        key: 2
+                    }
+                ]
+            },
+            {
+                title: "Personal Projects",
+                projects: [{
+                    name: "Website",
+                    folderName: "website",
+                    picsDescr: ["Endproduct, night mode.", "Endproduct, day mode.", "Code example.", "Mockup."],
+                    video: false,
+                    date: "2020",
+                    tags: ["coding", "visuals"],
+                    desctiption: [`This website was created with the React framework in JavaScript and is hosted by GitHub Pages. Everything was designed and programmed by myself.`],
+                    tasks: ["Developement of visual concept", "Coding of the website", "Design adaptations for different screen sizes"],
+                    percentage: 100,
                     key: 3
-                    }, {
+                    }]
+            },
+            {
+                title: "Experimental Games",
+                projects: [
+                    {
                     name: "Too MUCH!",
                     folderName: "toomuch",
+                    video: true,
+                    videoEmbedID: "ypnxJu6msPA",
+                    picsDescr: ["Midgame (Screenshot).", "Midgame (Screenshot).", "Underlying processing of movement (Screenshot).", "End screen (Screenshot)."],
                     date: "2020",
                     tags: ["mechanics", "coding"],
                     desctiption: [`Do you ever feel overwhelmed by too much affection? I know, happens to me all the time too! Slap your obnoxious punter away before they can reach your heart and trap it forerver.`,
@@ -115,6 +260,9 @@ class App extends Component {
                     {
                     name: "Send NEWS!",
                     folderName: "sendnews",
+                    video: true,
+                    videoEmbedID: "1ZWumjEy5jU",
+                    picsDescr: ["Midgame (Screenshot).", "Midgame (Screenshot).", "Midgame (Screenshot).", "Midgame with multiple connections (Screenshot)."],
                     date: "2020",
                     tags: ["storytelling", "coding", "sound"],
                     desctiption: [`This project deals with the digital and volatile interactions as well as the news overflow during the corona pandemic.`,
@@ -125,20 +273,6 @@ class App extends Component {
                     collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
                     key: 5
                     },
-                    {
-                    name: "Project Zagreus",
-                    folderName: "projectzagreus",
-                    date: "2021",
-                    tags: ["concept", "storytelling", "coding"],
-                    desctiption: [`RRI Inc. is a company specialised in the investigation of shipwrecks and retrieving blackboxes for insurance and criminal investigation purposes. 
-                    You have been working for the company for years, but never experienced a case like this one. An unknown ship has sunken under strange circumstances.`,
-                    `Dive into the claustrophobic corridors of the sunken colossus to find out the truth. Experience one of your colleagues turning against you, while unknown creatures lurk in the dark abyss of the sea.`],
-                    tasks: ["Story writing"],
-                    percentage: 25,
-                    collaborators: [{name: "@milkimoone", href:"https://www.instagram.com/milkimoone"},{name: "@AnjaSchrodin", href:"https://www.instagram.com/lyannjohnes"},{name: "@SamuelKnüsel", href:"https://jestercap.itch.io/"}, {name: "@RobinGood", href:"https://godor.itch.io/"}],
-                    quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/project-zagreus"}],
-                    key: 6
-                    }, 
                 ]
             },
         ]
@@ -151,10 +285,11 @@ class App extends Component {
         && document.documentElement.style.getPropertyValue('--main-color')  !== "#111";
         if(isLight)
             this.setState({darkMode: false}, this.forceUpdate());
+        this.onFilterToggle();
     };
 
     componentWillUnmount() {
-        window.addEventListener("resize", this.handleResize);
+        window.removeEventListener("resize", this.handleResize);
     };
     componentDidUpdate() {
     }
@@ -175,7 +310,9 @@ class App extends Component {
     onPathChange = (path) => {
         this.setState({ activePath: path }); /* Sets activePath which causes rerender which causes CSS to change */
         this.setHeight(path);
+        this.filterOpen = false;
     }
+
     /* Navbar functions */
     handleResize = (e) => this.setState({ windowWidth: window.innerWidth });
 
@@ -187,11 +324,12 @@ class App extends Component {
         this.setBodyPaddig(!this.state.navExpanded);
         this.setState({navExpanded: !this.state.navExpanded});
     };
-    /* Modal functions */
+
+    /* ---- Modal functions */
     openModal = (imgSource) => {
         const modal = document.getElementById("myModal");
         modal.style.display = "flex";
-        this.setState({modalOpen: true, modalImgSource: imgSource});
+        this.setState({modalOpen: true, modalImgSource: imgSource, modalFocusedProject: imgSource});
     };
     closeModal = () => {
         const modal = document.getElementById("myModal");
@@ -201,13 +339,32 @@ class App extends Component {
     setImgSource = (string) => {
         this.setState({modalImgSource: string});
     };
-    /* Dark Light Mode */
+
+    /* ---- Dark Light Mode */
     changeMode = () => {
         document.documentElement.style.setProperty('--main-color', !this.state.darkMode? "#111" : "#e4e3e3");
         document.documentElement.style.setProperty('--secondary-color', !this.state.darkMode? "#e4e3e3":"#111");
         this.setState({darkMode: !this.state.darkMode});
         this.forceUpdate();
     }
+
+    /* --- Tag Filtering Functions */
+    onFilterToggle = () => {
+        this.setState({filterOpen: !this.state.filterOpen});
+        if(!this.state.filterOpen)
+            this.setState({filter: []});
+    }
+    onFilterChange = (string) => {
+        if(this.state.filter.length > 0 && this.state.filter.includes(string))
+        {
+            var newFilter = this.state.filter;
+            newFilter.splice(this.state.filter.indexOf(string), 1);
+            this.setState({filter: newFilter});
+        }
+        else
+            this.setState({filter: this.state.filter.concat([string])});
+    }
+
     render() {
         return (
         <Router>
@@ -216,11 +373,32 @@ class App extends Component {
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
                 <Topnav routes={this.state} onPathChange={this.onPathChange} onNavExpand={this.onNavExpand} navExpanded={this.state.navExpanded} windowWidth={this.state.windowWidth} darkMode={this.state.darkMode} changeMode={this.changeMode}/>
             </div>  
-            <Modal imgSource={this.state.modalImgSource} openModal={this.openModal} closeModal={this.closeModal} setImgSource={(e) => this.setImgSource(e)}/>
+            
+            <Modal imgSource={this.state.modalImgSource} openModal={this.openModal} closeModal={this.closeModal} setImgSource={(e) => this.setImgSource(e)} gameCollection={this.gameCollection} projectCollection={this.projectCollection}/>
+            
             <Switch>
                 <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig} onPathChange={this.onPathChange}/>}/>
                 <Route path="/about" render={()=><About setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
-                <Route path="/projects" render={()=><Projects projectCollection={this.projectCollection} navExpanded={this.state.navExpanded} setBodyPadding={this.setBodyPaddig} onImgClick={(string) => this.openModal(string)}/>} />
+                <Route path="/games" render={()=><Games 
+                    projectCollection={this.gameCollection} 
+                    navExpanded={this.state.navExpanded} 
+                    setBodyPadding={this.setBodyPaddig} 
+                    onImgClick={(string) => this.openModal(string)} 
+                    onFilterToggle={() => this.onFilterToggle()} 
+                    onFilterChange={(string)=> this.onFilterChange(string)} 
+                    filterExpanded={this.state.filterOpen}
+                    filter={this.state.filter}
+                    />}/>
+                <Route path="/projects" render={()=><Projects 
+                    projectCollection={this.projectCollection} 
+                    navExpanded={this.state.navExpanded} 
+                    setBodyPadding={this.setBodyPaddig} 
+                    onImgClick={(string) => this.openModal(string)} 
+                    onFilterToggle={() => this.onFilterToggle()} 
+                    onFilterChange={(string)=> this.onFilterChange(string)}  
+                    filterExpanded={this.state.filterOpen}
+                    filter={this.state.filter}
+                    />}/>
                 <Route path="/contact" render={()=><Contact setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route component={NoMatch} />
             </Switch>

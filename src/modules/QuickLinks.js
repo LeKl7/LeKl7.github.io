@@ -9,6 +9,8 @@ export default class QuickLinks extends React.Component {
         switch(label) {
             case "Download": return (<FaItchIo style={{margin: "0px 4px"}}/>);
             case "Trailer": return (<FaVideo style={{margin: "0px 4px"}}/>);
+            case "Showcase": return (<FaVideo style={{margin: "0px 4px"}}/>);
+            case "Gameplay": return (<FaVideo style={{margin: "0px 4px"}}/>);
             default: return (<></>)
         }
     }

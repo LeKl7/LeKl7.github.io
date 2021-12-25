@@ -5,6 +5,7 @@ import ClickableImage from '../modules/ClickableImage';
 import QuickLinks from '../modules/QuickLinks';
 import WorkPercentage from "../modules/WorkPercentage"
 import {Video} from 'cloudinary-react';
+import YoutubeEmbed from "../modules/YoutubeEmbed";
 
 export default class ProjectCard extends Component {
     getCollaborationString = () => {
@@ -20,14 +21,20 @@ export default class ProjectCard extends Component {
 
     render() {
         return (
-            <div className="d-card-wrapper">
+            <div className={this.props.isFirst? "d-card-wrapper d-card-wrapper-first" : "d-card-wrapper"}>
             <div className="d-card">
             {/* Image Container */}
                 <div className="d-card-img-container" id={`imgContainer${this.props.project.key}`}>
-                            {/* Video */}
-                        {/* <video className="d-card-img-main d-card-img" loop="loop" autoPlay muted controls>
-                            <source src={`${process.env.PUBLIC_URL}/assets/videos/${this.props.project.name}.mp4`} type="video/mp4"/></video> */}
-                        <Video className="d-card-img-main d-card-img" autoPlay loop="true" muted controls webkit-playsinline="true" playsInline cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
+                        {/* Video */}
+                        {this.props.project.video &&
+                            //<Video className="d-card-img-main d-card-img" autoPlay loop={true} muted controls webkit-playsinline="true" playsInline cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
+                            <YoutubeEmbed embedId={this.props.project.videoEmbedID}/>
+                        }
+                        {/* Main Photo */}
+                        {!this.props.project.video &&
+                            <ClickableImage folder={this.props.project.folderName} imgName={"Main.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                        }
+
                         <div className="d-card-img-screenshots-container">
                             <ClickableImage folder={this.props.project.folderName} imgName={"1.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
                             <ClickableImage folder={this.props.project.folderName} imgName={"2.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
@@ -38,7 +45,7 @@ export default class ProjectCard extends Component {
                 {/* Text Container */}
                 <div className="d-card-text-container" id={`textContainer${this.props.project.key}`}>
                     <div className="d-card-title-container">
-                        <h1 className="p header d-card-title">{this.props.project.name} 
+                        <h1 className="p header d-card-title">{this.props.project.name} {this.props.project.claim}
                         <sup style={{fontSize:"20px"}}> ({this.props.project.date})
                             </sup></h1>
                         <div className="d-card-tags-container">
@@ -72,7 +79,7 @@ export default class ProjectCard extends Component {
                         </div>}
                     </div>
                     {/* Tasks */}
-                    <div style={{display: "flex", flexFlow:"row"}}>
+                    <div style={{display: "flex", flexFlow:"column"}}>
                     <ul className="d-card-ul">
                     {this.props.project.tasks.map((task)=>{
                             return(
@@ -90,7 +97,7 @@ export default class ProjectCard extends Component {
                     }
                 </div>
             </div>
-            <Arrows curProjIndex={this.props.project.key} isLast={this.props.isLast}/>
+            <Arrows sectionName={this.props.sectionName} curProjIndex={this.props.project.key} isLast={this.props.isLast}/>
             </div>
         );
     }

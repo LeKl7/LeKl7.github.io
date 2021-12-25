@@ -14,13 +14,19 @@ export default class Arrows extends React.Component {
         return current + 1;
     }
 
+    renderDownButton = () => {
+        if (!this.props.isLast)
+            return <a className="nav-arrow hvr-shutter-out-vertical hvr-shutter-out-vertical-square" href={`#${this.getNextHref()}`}><FaCaretDown/></a>
+        else
+            return <div className="nav-arrow" style={{filter: "opacity(0.1)"}}><FaCaretDown/></div>
+    }
+
     render() {
         return (
         <div className="nav-arrow-container">
         <a className="nav-arrow hvr-shutter-out-vertical-square hvr-shutter-out-vertical" href={`#${this.getPrevHref()}`}><FaCaretUp/></a>
-        {!this.props.isLast &&
-            <a className="nav-arrow hvr-shutter-out-vertical hvr-shutter-out-vertical-square" href={`#${this.getNextHref()}`}><FaCaretDown/></a>
-        }
+        <div className="p d-card-text-container rotate" style={{justifyContent: "center", flex: "none"}}>{this.props.sectionName}</div>
+        {this.renderDownButton()}
         </div>
         );
     }

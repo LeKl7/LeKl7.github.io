@@ -46,7 +46,7 @@
   
   .hvr-shutter-out-vertical-square {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: text-top;
     -webkit-transform: perspective(1px) translateZ(0);
     transform: perspective(1px) translateZ(0);
     position: relative;
