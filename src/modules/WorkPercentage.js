@@ -40,7 +40,7 @@ export default class WorkPercentage extends React.Component {
     render() {
         return (
             <div className="work-percentage-container">
-            <div classNams="p p-body d-card-description" style={{marginRight: "10px"}}>Overall contribution: </div>
+            <div className="p p-body d-card-description" style={{marginRight: "10px"}}>Overall contribution: </div>
             <canvas className="work-percentage" id={`work-percentage-${this.props.id}`} width="50px" height="50px"> </canvas>
             <div className="p p-body d-card-description" style={{marginBottom: "0px", marginLeft: "10px"}}>{this.props.perc}%</div>
           </div> 
