@@ -59,7 +59,7 @@ export default class OverviewCard extends Component {
                 filteredProjects.map((proj) => {
                 return (
                     <div className="d-card-title-container" key={proj.key}>
-                    <li><a className="p d-card-list d-card-list-overview hvr-shutter-out-vertical" href={`${proj.key}`}>{proj.name} 
+                    <li><a className="p d-card-list d-card-list-overview hvr-shutter-out-vertical" href={`#${proj.key}`}>{proj.name} 
                     <sup style={{fontSize:"px"}}> ({proj.date})
                         </sup></a></li>
                         <div className="d-card-tags-container" style={{marginTop: "0px", marginLeft: "25px"}}>
