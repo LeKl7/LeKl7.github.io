@@ -103,7 +103,7 @@ class App extends Component {
                         `This game was created during 3 days of a game jam.`],
                         tasks: ["Developement of concept", "Coding of the entire project"],
                         percentage: 33,
-                        collaborators: [{name: "@ManuelWirth", href:"https://www.manuelwirth.ch/"}, {name:"@lulatschia", href:"https://lulatschia.myportfolio.com/"}], //TODO
+                        collaborators: [{name: "@kathleenbohren1", href:"https://www.manuelwirth.ch/"}, {name:"@lulatschia", href:"https://lulatschia.myportfolio.com/"}], //TODO
                         quickLinks:[{label: "Play", href:"https://lenzkleiser.itch.io/fromragtosilk"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}], //TODO: Trailer
                         key: 3
                         }]
@@ -385,7 +385,7 @@ class App extends Component {
 
     render() {
         return (
-        <Router>
+        <Router > {/*basename='lekl7.github.io'*/}
             <div>
             {/*  <!-- Including Font Awesome --> */}
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
@@ -418,6 +418,7 @@ class App extends Component {
                     filter={this.state.filter}
                     />}/>
                 <Route path="/contact" render={()=><Contact setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
+                <Route path="*" serve />
                 <Route component={NoMatch} />
             </Switch>
         </Router>
