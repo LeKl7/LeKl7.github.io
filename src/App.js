@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation, HashRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
 import Topnav from './modules/Topnav';
 import Modal from './modules/Modal';
 import Home from './pages/Home';
@@ -385,7 +385,7 @@ class App extends Component {
 
     render() {
         return (
-        <HashRouter>
+        <Router>
             <div>
             {/*  <!-- Including Font Awesome --> */}
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
@@ -420,7 +420,7 @@ class App extends Component {
                 <Route path="/contact" render={()=><Contact setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route component={NoMatch} />
             </Switch>
-        </HashRouter>
+        </Router>
         );
     }
 }
