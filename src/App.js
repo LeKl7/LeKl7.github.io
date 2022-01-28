@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useLocation, HashRouter } from "react-router-dom";
 import Topnav from './modules/Topnav';
 import Modal from './modules/Modal';
 import Home from './pages/Home';
@@ -86,9 +86,27 @@ class App extends Component {
                     tasks: ["Developement of concept", "Coding of the entire project"],
                     percentage: 33,
                     collaborators: [{name: "@ManuelWirth", href:"https://www.manuelwirth.ch/"}, {name:"@lulatschia", href:"https://lulatschia.myportfolio.com/"}],
-                    quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
+                    quickLinks:[{label: "Play", href:"https://lulatschia.itch.io/planethesis"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
                     key: 2
-                    }]
+                    },
+                    {
+                        name: "From Rag to Silk",
+                        claim: "- Don't sew your fingers",
+                        folderName: "ragtosilk",
+                        videoEmbedID: "9PxdmKq58fs",
+                        video: true,
+                        picsDescr: ["Start Screen (Screenshot).", "Mid Game (Screenshot).", "Mid Game (Screenshot).", "Mid Game (Screenshot)."],
+                        date: "2022",
+                        tags: ["concept", "coding", "game-design", "game-jam"],
+                        desctiption: [` A well-crafted dress makes all the difference in love. Help your customers in their pursuit of happiness.`, 
+                        `From rag to silk is a skill game in which you have to operate a sewing machine. Speed and precision are the keys to success.`, 
+                        `This game was created during 3 days of a game jam.`],
+                        tasks: ["Developement of concept", "Coding of the entire project"],
+                        percentage: 33,
+                        collaborators: [{name: "@ManuelWirth", href:"https://www.manuelwirth.ch/"}, {name:"@lulatschia", href:"https://lulatschia.myportfolio.com/"}], //TODO
+                        quickLinks:[{label: "Play", href:"https://lenzkleiser.itch.io/fromragtosilk"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}], //TODO: Trailer
+                        key: 3
+                        }]
             },
             {
                 title: "ZHdK Games",
@@ -107,7 +125,7 @@ class App extends Component {
                         tasks: ["Two minigame mechanics", "System programming", "Dialogue programming"],
                         collaborators: [{name: "First year GameDesign students"}],
                         quickLinks:[{label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=9jPSSWCKI5Y&feature=emb_title&ab_channel=BackpainGames"}],
-                        key: 3
+                        key: 4
                     },
                     {
                         name: "THAR",
@@ -128,7 +146,7 @@ class App extends Component {
                             {label: "Trailer", href:"https://youtu.be/tgOlhzYOIzU"},
                             {label: "Gameplay", href:"https://youtu.be/Mennis5pnaE"}
                         ], 
-                        key: 4
+                        key: 5
                     },
                     {
                         name: "Sansù",
@@ -145,7 +163,7 @@ class App extends Component {
                         quickLinks:[{label: "Download", href:"https://leapero.itch.io/sansu-vs-lords-of-the-meat"}, 
                             {label: "Trailer", href:"https://youtu.be/V6LqDupIPjg"},
                             {label: "Gameplay", href:"https://youtu.be/6iDEsS5UKgc"}],
-                        key: 5
+                        key: 6
                     },
                     {
                     name: "Hangry Frogs",
@@ -163,7 +181,7 @@ class App extends Component {
                     percentage: 50,
                     collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
                     quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/hangry-frogs-on-ice"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=cFMsNZKugJg&feature=emb_title"}],
-                    key: 6
+                    key: 7
                     },
                     {
                     name: "Project Zagreus",
@@ -180,7 +198,7 @@ class App extends Component {
                     percentage: 25,
                     collaborators: [{name: "@milkimoone", href:"https://www.instagram.com/milkimoone"},{name: "@AnjaSchrodin", href:"https://www.instagram.com/lyannjohnes"},{name: "@SamuelKnüsel", href:"https://jestercap.itch.io/"}, {name: "@RobinGood", href:"https://godor.itch.io/"}],
                     quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/project-zagreus"}],
-                    key: 7
+                    key: 8
                     }, 
                 ]
             },
@@ -367,7 +385,7 @@ class App extends Component {
 
     render() {
         return (
-        <Router>
+        <HashRouter>
             <div>
             {/*  <!-- Including Font Awesome --> */}
             <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"></link>
@@ -402,7 +420,7 @@ class App extends Component {
                 <Route path="/contact" render={()=><Contact setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route component={NoMatch} />
             </Switch>
-        </Router>
+        </HashRouter>
         );
     }
 }

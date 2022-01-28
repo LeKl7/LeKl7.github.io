@@ -8,6 +8,7 @@ export default class QuickLinks extends React.Component {
     getSymbol = (label) => {
         switch(label) {
             case "Download": return (<FaItchIo style={{margin: "0px 4px"}}/>);
+            case "Play": return (<FaItchIo style={{margin: "0px 4px"}}/>);
             case "Trailer": return (<FaVideo style={{margin: "0px 4px"}}/>);
             case "Showcase": return (<FaVideo style={{margin: "0px 4px"}}/>);
             case "Gameplay": return (<FaVideo style={{margin: "0px 4px"}}/>);
