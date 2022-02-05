@@ -115,7 +115,11 @@ position: absolute;
 }
 .tag-filter-container:hover {
     cursor:pointer;
-   }
+}
+
+.maxScreenSize {
+    max-width: 80vw;
+}
 
 
 @media only screen and (max-width: 640px) {

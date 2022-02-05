@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaItchIo, FaVideo} from 'react-icons/fa';
+import {FaItchIo, FaVideo, FaFileAlt} from 'react-icons/fa';
 import '../styles/styles.css';
 import '../styles/animation.css';
 
@@ -12,6 +12,7 @@ export default class QuickLinks extends React.Component {
             case "Trailer": return (<FaVideo style={{margin: "0px 4px"}}/>);
             case "Showcase": return (<FaVideo style={{margin: "0px 4px"}}/>);
             case "Gameplay": return (<FaVideo style={{margin: "0px 4px"}}/>);
+            case "Documentation": return (<FaFileAlt style={{margin: "0px 4px"}}/>);
             default: return (<></>)
         }
     }

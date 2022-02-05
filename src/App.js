@@ -8,6 +8,7 @@ import { NoMatch } from './pages/NoMatch';
 import Games from './pages/Games';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import CompuTexturesDoc from './pages/CompuTexturesDoc';
 
 class App extends Component {
     constructor(props) {
@@ -210,22 +211,26 @@ class App extends Component {
                 title: "Unity Extensions",
                 projects: [
                     {
-                        name: "Noise Generator", // ! To be created!
-                        folderName: "noisegenerator",
+                        name: "CompuTextures", // ! To be created!
+                        claim: "- Editor Texture Creator",
+                        folderName: "computextures",
                         video: true,
-                        videoEmbedID: "-",
-                        picsDescr: ["", "", "", ""],
+                        videoEmbedID: "y5beGYa_Zns",
+                        picsDescr: ["Marketing cover.", "Screenshot.", "Marketing image.", "Marketing image."],
                         date: "2021",
                         tags: ["coding", "extension"],
                         desctiption: [
-                            `...`, 
-                            `...`],
-                        tasks: ["A fully modular noise Generation running on GPU", "2D and 3D texture management"],
+                            `When doing procedural visuals you are in need of tileable textures. With this tool you will never have to search the internet again! Create and save textures within the Unity Editor.`, 
+                            `Features include tileable 2D / 3D noise, which can be combined and modified to fit your needs. Afterwards, the textures can be saved as .png or as .asset files.`,
+                            `It is available on the asset store.`],
+                        tasks: ["A fully modular noise generator running on GPU", "2D and 3D texture management"],
                         percentage: 100,
-                        quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Showcase", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
+                        quickLinks:[{label: "Download", href:"https://assetstore.unity.com/packages/slug/211761"}, 
+                        {label: "Showcase", href:"https://youtu.be/y5beGYa_Zns"},
+                        {label: "Documentation", href:"https://lorenzkleiser.notion.site/Documentation-CompuTextures-V1-0-9b0333a96d3d47d6b16ab19db302a53e"}],
                         key: 1
                     },
-                    {
+                    /* {
                         name: "Lazy Logging", // ! To be created!
                         folderName: "lazylogging",
                         date: "2021",                        
@@ -240,7 +245,7 @@ class App extends Component {
                         percentage: 100,
                         quickLinks:[{label: "Download", href:"https://lulatschia.itch.io/planethesis"}, {label: "Showcase", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}],
                         key: 2
-                    }
+                    } */
                 ]
             },
             {
@@ -418,6 +423,7 @@ class App extends Component {
                     filter={this.state.filter}
                     />}/>
                 <Route path="/contact" render={()=><Contact setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
+                {/* <Route exact path="/CompuTextures/Documentation" render={()=><CompuTexturesDoc setBodyPadding={this.setBodyPaddig} onPathChange={this.onPathChange}/>}/> */}
                 <Route path="*" serve />
                 <Route component={NoMatch} />
             </Switch>
