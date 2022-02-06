@@ -136,7 +136,7 @@ class App extends Component {
                         video: true,
                         picsDescr: ["Title Screen.", "Controlling SMALL unit (Screenshot).", "Tutorial Slides (Screenshot).", "Shooting SMALL unit (Screenshot)."],
                         date: "2021",
-                        tags: ["mechanics", "coding"],
+                        tags: ["mechanics", "coding", "vrar"],
                         desctiption: [`THAR - Secrets beneath the sand.`,
                         `To survive the blazing heat of the Thar desert, take control over a robo and steer your way through the ancient ruins, solve puzzles and discover its secrets.`,
                         `THAR is a VR game created for the Oculus Quest 1 and 2.`],
@@ -166,6 +166,20 @@ class App extends Component {
                             {label: "Gameplay", href:"https://youtu.be/6iDEsS5UKgc"}],
                         key: 6
                     },
+                    /* {
+                        name: "Shattered Mind",
+                        folderName: "shatteredmind",
+                        video: true,
+                        videoEmbedID: "wnqIk3laQlk",
+                        picsDescr: ["Collecting an orb (Screenshot).", "Startscreen (Photo).", "Midgame (Screenshot).", "Midgame (Photo)."],
+                        date: "2021",
+                        tags: ["concept", "coding"],
+                        desctiption: [`Descend into the darkness and keep your sanity. Tilt the device to steer down the elevator.`,
+                        `This is a proof of concept prototype, which is played on a mobile device.`],
+                        tasks: ["Entire programming"],
+                        quickLinks:[{label: "Trailer", href:"https://youtu.be/Lojjd5JXkCs"}],
+                        key: 7
+                    }, */
                     {
                     name: "Hangry Frogs",
                     claim: "- On Ice",
@@ -211,7 +225,7 @@ class App extends Component {
                 title: "Unity Extensions",
                 projects: [
                     {
-                        name: "CompuTextures", // ! To be created!
+                        name: "CompuTextures",
                         claim: "- Editor Texture Creator",
                         folderName: "computextures",
                         video: true,
@@ -264,8 +278,53 @@ class App extends Component {
                     }]
             },
             {
-                title: "Experimental Games",
+                title: "ZHdK Projects",
                 projects: [
+                    {
+                        name: "Marble Escape",
+                        folderName: "marbleescape",
+                        video: true,
+                        videoEmbedID: "e_rnvJBX6is",
+                        picsDescr: ["Cover image.", "Package contents.", "One layer of the labyrinth.", "Black tiles."],
+                        date: "2021",
+                        tags: ["concept", "game-design"],
+                        desctiption: [`Marble Escape is a competitive marble-racing boardgame through three layers of a labyrinth.`,
+                        `Swap black tiles to change the labyrinth. Outsmart your opponent by blocking his way but opening the way to victory for yourself.`],
+                        tasks: ["Concept of the boardgame", "Manufacturing of the prototype"],
+                        quickLinks:[{label: "Gameplay", href:"https://youtu.be/mpNoDb7zD5c"}],
+                        collaborators: [{name: "@milkimoone", href:"https://www.instagram.com/milkimoone"}],
+                        percentage: 50,
+                        key: 4
+                    },
+                    {
+                        name: "Windturbine A25",
+                        folderName: "windturbine",
+                        video: true,
+                        videoEmbedID: "QOEQxVFeGQw",
+                        picsDescr: ["Cover image.", "Screenshot.", "Screenshot.", "Screenshot."],
+                        date: "2021",
+                        tags: ["visuals", "sound"],
+                        desctiption: [`We were tasked to create an object in the style of the designer Dieter Rams.`,
+                        `I created the Windturbine A25 in blender and made four animation clips inside Unity. Afterwards, I did the sound design. The full clip can be seen in the trailer.`],
+                        quickLinks:[{label: "Trailer", href:"https://youtu.be/UZu22OHWTFE"}],
+                        tasks: ["Modelling and texturing in Blender", "Animation in Unity", "Sounddesign"],
+                        key: 5
+                    },
+                    /* {
+                        name: "Heather Gray",
+                        folderName: "heathergray",
+                        video: true,
+                        videoEmbedID: "QOEQxVFeGQw",
+                        picsDescr: ["Cover image.", "Screenshot.", "Screenshot.", "Screenshot."],
+                        date: "2021",
+                        tags: ["visuals", "sound"],
+                        desctiption: [`We were tasked to create an object in the style of the designer Dieter Rams.`,
+                        `I created the Windturbine A25 in blender and made four animation clips inside Unity. Afterwards, I did the sound design. The full clip can be seen in the trailer.`],
+                        quickLinks:[{label: "Trailer", href:"https://youtu.be/UZu22OHWTFE"}],
+                        tasks: ["Modelling and texturing in Blender", "Animation in Unity", "Sounddesign"],
+                        percentage: 100,
+                        key: 5
+                    }, */
                     {
                     name: "Too MUCH!",
                     folderName: "toomuch",
@@ -277,7 +336,6 @@ class App extends Component {
                     desctiption: [`Do you ever feel overwhelmed by too much affection? I know, happens to me all the time too! Slap your obnoxious punter away before they can reach your heart and trap it forerver.`,
                     `In this project, I created a game given the theme "I have nothing, if I don't have you". It was programmed in Processing.`],
                     tasks: ["Programming in Processing"],
-                    percentage: 100,
                     key: 4
                     },
                     {

@@ -19,7 +19,7 @@ export default class TagFilter extends React.Component {
         return (<div className={`p ${this.props.filter.length > 0 && this.props.filter.includes(tag) ? "d-card-tag" : "d-card-tag-overview"} ${tag}`} style={{fontSize: "15px"}} key={tag} onClick={() => this.props.onFilterChange(tag)}></div>);
     }
     
-    getAllTags = () => { return ["concept", "storytelling", "game-design", "mechanics", "sound", "coding", "visuals", "game-jam", "extension"]}
+    getAllTags = () => { return ["concept", "storytelling", "game-design", "mechanics", "sound", "coding", "visuals", "game-jam", "extension", "vrar"]}
 
     render() {
         return (
