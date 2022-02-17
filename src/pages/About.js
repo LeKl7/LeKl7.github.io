@@ -31,7 +31,7 @@ export default class About extends React.Component {
                                 I’m a Swiss developer currently studying Game Design at the ZHdK in Zürich and computer science at the distance learning university Hagen.
                             </div>
                             <div style={{marginBottom:"13px"}}>
-                                My greatest fascination lies within the possibility of 
+                                My greatest fascination lies within the possibilities of 
                                 <div className={`p d-card-tag coding`} style={this.tagStyle}></div>.
                                 The process of creation through an abstract but strictly logical language, in a digital space without real world limitations.
                             </div>

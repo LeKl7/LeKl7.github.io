@@ -8,13 +8,13 @@ export default class SocialMedia extends React.Component {
             <div id="topnav-social-container" style={this.props.style}>
             {/* <a href="https://www.github.com" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
             <FaGithub />
-            </a>
-            <a href="https://www.twitter.com" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
+            </a> */}
+            <a href="https://twitter.com/LenzKleiser" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
             <FaTwitter />
             </a>
-            <a href="https://www.linkedin.com" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
+            <a href="https://linkedin.com/in/lorenzkleiser" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
             <FaLinkedinIn/>
-            </a> */}
+            </a>
             <a href="https://lenzkleiser.itch.io/" className="topnav-social hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
             <FaItchIo/>
             </a>
