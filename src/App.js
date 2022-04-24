@@ -104,10 +104,28 @@ class App extends Component {
                         `This game was created during 3 days of a game jam.`],
                         tasks: ["Developement of concept", "Coding of the entire project"],
                         percentage: 33,
-                        collaborators: [{name: "@kathleenbohren1", href:"https://www.manuelwirth.ch/"}, {name:"@lulatschia", href:"https://lulatschia.myportfolio.com/"}], //TODO
-                        quickLinks:[{label: "Play", href:"https://lenzkleiser.itch.io/fromragtosilk"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"}], //TODO: Trailer
+                        collaborators: [{name: "@kathleenbohren1", href:"https://www.manuelwirth.ch/"}, {name:"@ryanbrandt"}],
+                        quickLinks:[{label: "Play", href:"https://lenzkleiser.itch.io/fromragtosilk"}],
                         key: 3
-                        }]
+                    },
+                    {
+                        name: "Projected Dreams",
+                        folderName: "projecteddreams",
+                        videoEmbedID: "eXk1VR7Tm_o",
+                        video: true,
+                        picsDescr: ["Start Screen (Screenshot).", "Mid Game (Screenshot).", "Mid Game (Screenshot).", "End screen (Screenshot)."],
+                        date: "2022",
+                        tags: ["concept", "visuals", "game-jam"],
+                        desctiption: [` Fulfill the shadow girl's wishes by dragging the children's toys from the shelves and dropping them onto the table.`, 
+                        `Recreate silhouettes close to the template in the spotlight to complete the level.`, 
+                        `This game was created during 7 days of the Brackeys game jam.`],
+                        tasks: ["Shaders", "Implementation of shadow matching mechanic"],
+                        percentage: 25,
+                        collaborators: [{name: "@aoyuna", href:"https://aoyuna.com/"}, {name:"@robinGood", href:"https://www.portfolio-robingood.com/"},
+                            {name:"@lucaImesch", href:"https://tondar.itch.io/"}],
+                        quickLinks:[{label: "Play", href:"https://aoyuna.itch.io/projected-dreams"}],
+                        key: 4
+                    }]
             },
             {
                 title: "ZHdK Games",
@@ -126,7 +144,7 @@ class App extends Component {
                         tasks: ["Two minigame mechanics", "System programming", "Dialogue programming"],
                         collaborators: [{name: "First year GameDesign students"}],
                         quickLinks:[{label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=9jPSSWCKI5Y&feature=emb_title&ab_channel=BackpainGames"}],
-                        key: 4
+                        key: 5
                     },
                     {
                         name: "THAR",
@@ -143,11 +161,11 @@ class App extends Component {
                         tasks: ["Mechanics", "System programming", "Shaders"],
                         collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
                         percentage: 50,
-                        quickLinks:[{label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, //!Change Download!
+                        quickLinks:[/* {label: "Download", href:"https://sk8terboii.itch.io/heels-n-feels"}, */ //!Change Download!
                             {label: "Trailer", href:"https://youtu.be/tgOlhzYOIzU"},
                             {label: "Gameplay", href:"https://youtu.be/Mennis5pnaE"}
                         ], 
-                        key: 5
+                        key: 6
                     },
                     {
                         name: "Sansù",
@@ -164,7 +182,7 @@ class App extends Component {
                         quickLinks:[{label: "Download", href:"https://leapero.itch.io/sansu-vs-lords-of-the-meat"}, 
                             {label: "Trailer", href:"https://youtu.be/V6LqDupIPjg"},
                             {label: "Gameplay", href:"https://youtu.be/6iDEsS5UKgc"}],
-                        key: 6
+                        key: 7
                     },
                     /* {
                         name: "Shattered Mind",
@@ -196,7 +214,7 @@ class App extends Component {
                     percentage: 50,
                     collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
                     quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/hangry-frogs-on-ice"}, {label: "Trailer", href:"https://www.youtube.com/watch?v=cFMsNZKugJg&feature=emb_title"}],
-                    key: 7
+                    key: 8
                     },
                     {
                     name: "Project Zagreus",
@@ -211,9 +229,9 @@ class App extends Component {
                     `Dive into the claustrophobic corridors of the sunken colossus to find out the truth. Experience one of your colleagues turning against you, while unknown creatures lurk in the dark abyss of the sea.`],
                     tasks: ["Story writing"],
                     percentage: 25,
-                    collaborators: [{name: "@milkimoone", href:"https://www.instagram.com/milkimoone"},{name: "@AnjaSchrodin", href:"https://www.instagram.com/lyannjohnes"},{name: "@SamuelKnüsel", href:"https://jestercap.itch.io/"}, {name: "@RobinGood", href:"https://godor.itch.io/"}],
+                    collaborators: [{name: "@milkimoone", href:"https://www.instagram.com/milkimoone"},{name: "@AnjaSchrodin", href:"https://www.instagram.com/lyannjohnes"},{name: "@SamuelKnüsel", href:"https://jestercap.itch.io/"}, {name: "@RobinGood", href:"https://www.portfolio-robingood.com/"}],
                     quickLinks:[{label: "Download", href:"https://lenzkleiser.itch.io/project-zagreus"}],
-                    key: 8
+                    key: 9
                     }, 
                 ]
             },
@@ -274,12 +292,29 @@ class App extends Component {
                     desctiption: [`This website was created with the React framework in JavaScript and is hosted by GitHub Pages. Everything was designed and programmed by myself.`],
                     tasks: ["Developement of visual concept", "Coding of the website", "Design adaptations for different screen sizes"],
                     percentage: 100,
-                    key: 3
+                    key: 2
                     }]
             },
             {
                 title: "ZHdK Projects",
                 projects: [
+                    {
+                        name: "RooMe",
+                        folderName: "roome",
+                        video: true,
+                        videoEmbedID: "jUKXTrbv8pc",
+                        picsDescr: ["RooMe in action.", "Artifact saved on the device.", "Rendering of the RooMe.", "View of the device."],
+                        date: "2021",
+                        tags: ["concept", "coding"],
+                        desctiption: [`We humans collect things. Things that remind us of something. Many of them are important to us, however we can not grasp them because they do not exist physically.`,
+                        `Let's make the intangible tangible again. Through the embodiment and presence of data in a space, RooMe blurs the boundaries between physical and digital.`],
+                        tasks: ["Split screen application setup", "Headtracking and parallax effect"],
+                        quickLinks:[{label: "Trailer", href:"https://youtu.be/CbULpl8QXMw"}],
+                        collaborators: [{name: "@janosch", href:"https://www.instagram.com/milkimoone"}],//TODO: Change
+                        percentage: 25,
+                        key: 3
+                        
+                    },
                     {
                         name: "Marble Escape",
                         folderName: "marbleescape",
@@ -336,7 +371,7 @@ class App extends Component {
                     desctiption: [`Do you ever feel overwhelmed by too much affection? I know, happens to me all the time too! Slap your obnoxious punter away before they can reach your heart and trap it forerver.`,
                     `In this project, I created a game given the theme "I have nothing, if I don't have you". It was programmed in Processing.`],
                     tasks: ["Programming in Processing"],
-                    key: 4
+                    key: 6
                     },
                     {
                     name: "Send NEWS!",
@@ -352,7 +387,7 @@ class App extends Component {
                     tasks: ["Text shader", "Game programming", "Webserver setup", "Sound Design"],
                     percentage: 50,
                     collaborators: [{name: "@lunaelaine", href:"https://luna-elaine.com/"}],
-                    key: 5
+                    key: 7
                     },
                 ]
             },
