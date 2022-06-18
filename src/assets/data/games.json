@@ -1,0 +1,508 @@
+{
+	"data": [
+		{
+			"title": "Client Games",
+			"projects": [
+				{
+					"name": "Ugly’s Magic",
+					"folderName": "uglysmagic",
+					"video": true,
+					"videoEmbedID": "Nnr_Eq-ufsQ",
+					"date": "2021",
+					"category": "Client",
+					"tags": [
+						"concept",
+						"visuals",
+						"coding"
+					],
+					"percentage": 100,
+					"viewAccess": [],
+					"description": [
+						"This project is an hommage to the old 'Ugly' nightclub in Zürich. The former owner, Ulrich Steinle, approached me to make a game installation for his 50th anniversary exibition in Richterswil.",
+						"Bring people to the 'Ugly' with good music! You play as the 'U' from 'Ugly' to lure as many cars as possible into the nightclub before the morning.",
+						"This installation was exhibited for one month."
+					],
+					"picsDescr": [
+						"Player collected a record (Screenshot).",
+						"Installation from the side.",
+						"Installation from the front.",
+						"Advertisement brochure for the event."
+					],
+					"tasks": [
+						"Creation of the installation."
+					],
+					"quickLinks": [
+						{
+							"label": "Trailer",
+							"href": "https://youtu.be/D4yMdezHH-U"
+						},
+						{
+							"label": "Gameplay",
+							"href": "https://youtu.be/w3hPMI0cnWw"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "Personal Games",
+			"projects": [
+				{
+					"name": "Planethesis",
+					"folderName": "planethesis",
+					"video": true,
+					"videoEmbedID": "Dd6DzHlILEk",
+					"date": "2020",
+					"category": "Personal",
+					"tags": [
+						"concept",
+						"coding",
+						"game-jam"
+					],
+					"percentage": 33,
+					"viewAccess": [
+						"TestCompany"
+					],
+					"description": [
+						"A war is raging between Church and Science, but only one party can come through as victorious! Decide whether the world will follow the holy path alongsit or trust in the works of Galileo Galilei.",
+						"Choose your stand and don’t let the other side take over the Universe!"
+					],
+					"picsDescr": [
+						"Start Screen (Screenshot).",
+						"Mid Game (Screenshot).",
+						"Mid Game (Screenshot).",
+						"Credits (Screenshot)."
+					],
+					"tasks": [
+						"Developement of concept",
+						"Coding of the entire project"
+					],
+					"quickLinks": [
+						{
+							"label": "Play",
+							"href": "https://lulatschia.itch.io/planethesis"
+						},
+						{
+							"label": "Trailer",
+							"href": "https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@ManuelWirth",
+							"href": "https://www.manuelwirth.ch/"
+						},
+						{
+							"label": "@lulatschia",
+							"href": "https://lulatschia.myportfolio.com/"
+						}
+					]
+				},
+				{
+					"name": "From Rag to Silk",
+					"folderName": "ragtosilk",
+					"video": true,
+					"videoEmbedID": "9PxdmKq58fs",
+					"date": "2022",
+					"category": "Personal",
+					"claim": "- Don't sew your fingers",
+					"tags": [
+						"coding",
+						"game-jam",
+						"concept"
+					],
+					"percentage": 33,
+					"viewAccess": [],
+					"description": [
+						"A well-crafted dress makes all the difference in love. Help your customers in their pursuit of happiness.",
+						"From rag to silk is a skill game in which you have to operate a sewing machine. Speed and precision are the keys to success.",
+						"This game was created during 3 days of a game jam."
+					],
+					"picsDescr": [
+						"Start Screen (Screenshot).",
+						"Mid Game (Screenshot).",
+						"Mid Game (Screenshot).",
+						"Mid Game (Screenshot)."
+					],
+					"tasks": [
+						"Developement of concept",
+						"Coding of the entire project"
+					],
+					"quickLinks": [
+						{
+							"label": "Play",
+							"href": "https://lenzkleiser.itch.io/fromragtosilk"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@kathleenbohren1"
+						},
+						{
+							"label": "@ryanbrandt"
+						}
+					]
+				},
+				{
+					"name": "Projected Dreams",
+					"folderName": "projecteddreams",
+					"video": true,
+					"videoEmbedID": "eXk1VR7Tm_o",
+					"date": "2022",
+					"category": "Personal",
+					"tags": [
+						"concept",
+						"visuals",
+						"game-jam"
+					],
+					"percentage": 25,
+					"viewAccess": [],
+					"description": [
+						"Fulfill the shadow girl's wishes by dragging the children's toys from the shelves and dropping them onto the table.",
+						"Recreate silhouettes close to the template in the spotlight to complete the level.",
+						"This game was created during 7 days of the Brackeys game jam."
+					],
+					"picsDescr": [
+						"\"Start Screen (Screenshot).",
+						"Mid Game (Screenshot).",
+						"Mid Game (Screenshot).",
+						"End screen (Screenshot)."
+					],
+					"tasks": [
+						"Shaders",
+						"Implementation of shadow matching mechanic"
+					],
+					"quickLinks": [
+						{
+							"label": "Play",
+							"href": "https://aoyuna.itch.io/projected-dreams"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@aoyuna",
+							"href": "https://aoyuna.com/"
+						},
+						{
+							"label": "@robinGood",
+							"href": "https://www.portfolio-robingood.com/"
+						},
+						{
+							"label": "@lucaImesch",
+							"href": "https://tondar.itch.io/"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "ZHdK Games",
+			"projects": [
+				{
+					"name": "Gravity Drifter",
+					"folderName": "gravitydrifter",
+					"video": true,
+					"videoEmbedID": "DELfNbZKKxc",
+					"date": "2022",
+					"category": "ZHdK",
+					"tags": [
+						"coding",
+						"visuals"
+					],
+					"percentage": 25,
+					"viewAccess": [],
+					"description": [
+						"Gravity Drifter is a small game that tells the story of Solo, who finds himself in a twisted world. After a cataclysmic event, parts of this world have been turned upside down and can now be seen in the sky filled with clouds. With the help of whirlwinds, Solo can switch between the two sides and thus search the world for clues to the origin of this devastating event. Aided only by a sheep, Solo's only hope of doing something about the chaos is to find the source.",
+						"Gravity Drifter was developed as part of a student project at the Zurich University of Arts (ZHdK).  It was made in a total of seven weeks with a team of 5 students."
+					],
+					"picsDescr": [
+						"The two worlds (Screenshot).",
+						"Mid Game (Screenshot).",
+						"A lone hero (Screenshot).",
+						"Mid Game, during world switch (Screenshot)."
+					],
+					"tasks": [
+						"Mechanics",
+						"Systems programming",
+						"Shaders, Technical Art"
+					],
+					"quickLinks": [
+						{
+							"label": "Trailer",
+							"href": "https://youtu.be/pOX221JekFc"
+						},
+						{
+							"label": "Gameplay",
+							"href": "https://youtu.be/wzlpJ51Kniw"
+						},
+						{
+							"label": "Download",
+							"href": "https://rahelgamma.itch.io/gravity-drifter"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@RahelGamma",
+							"href": "https://rahelgamma.itch.io/"
+						},
+						{
+							"label": "@YoshiZiegerli",
+							"href": "https://www.instagram.com/deadhok/"
+						},
+						{
+							"label": "@Rozenberg",
+							"href": "https://itch.io/profile/rozenberg"
+						},
+						{
+							"label": "@IHolzen",
+							"href": "https://holzenburg.com/"
+						}
+					]
+				},
+				{
+					"name": "THAR",
+					"folderName": "thar",
+					"video": true,
+					"videoEmbedID": "OXOAGnzHjcg",
+					"date": "2021",
+					"category": "ZHdK",
+					"claim": "- Secrets Underneath The Sand",
+					"tags": [
+						"mechanics",
+						"coding",
+						"vrar"
+					],
+					"percentage": 50,
+					"viewAccess": [],
+					"description": [
+						"THAR - Secrets beneath the sand.",
+						"To survive the blazing heat of the Thar desert, take control over a robo and steer your way through the ancient ruins, solve puzzles and discover its secrets.",
+						"THAR is a VR game created for the Oculus Quest 1 and 2.",
+						"It was exhibited at the FantasyBasel in 2022."
+					],
+					"picsDescr": [
+						"Title Screen.",
+						"Controlling SMALL unit (Screenshot).",
+						"Tutorial Slides (Screenshot).",
+						"Shooting SMALL unit (Screenshot)."
+					],
+					"tasks": [
+						"Mechanics",
+						"System programming",
+						"Shaders & Technical Art"
+					],
+					"quickLinks": [
+						{
+							"label": "Trailer",
+							"href": "https://youtu.be/tgOlhzYOIzU"
+						},
+						{
+							"label": "Gameplay",
+							"href": "https://youtu.be/Mennis5pnaE"
+						},
+						{
+							"label": "Download",
+							"href": "https://www.oculus.com/experiences/quest/4465849756830113/"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@lunaelaine",
+							"href": "https://luna-elaine.com/"
+						}
+					]
+				},
+				{
+					"name": "Heels 'n Feels",
+					"folderName": "heelsnfeels",
+					"video": true,
+					"videoEmbedID": "g-did6fWnMw",
+					"date": "2020",
+					"category": "ZHdK",
+					"tags": [
+						"coding",
+						"mechanics"
+					],
+					"viewAccess": [],
+					"description": [
+						"Heels ‘n Feels is a queer, kinda furry visual novel with mini games about the perils of heelying too close to the sun. If you know that heelys are way cooler than skateboards and love to read a shit-ton of dialogue, then this games is for you!",
+						"This game was created by 18 game design students in two weeks for one of our class modules. The art style and music was partially inspired by a mix of all things 80s and 2000s.",
+						"Enter a world of chaos and confusion while trying to get rid of a corpse, that might kind of be your fault. But do try to bond with your friends as well, before you all have to go your separate ways."
+					],
+					"picsDescr": [
+						"'Trunk Tetris' Minigame (Screenshot).",
+						"Heelyin' (Screenshot).",
+						"Dialogue Sequence (Screenshot).",
+						"Dialogue Sequence (Screenshot)."
+					],
+					"tasks": [
+						"Two minigame mechanics",
+						"System programming",
+						"Dialogue programming"
+					],
+					"quickLinks": [
+						{
+							"label": "Download",
+							"href": "https://sk8terboii.itch.io/heels-n-feels"
+						},
+						{
+							"label": "Trailer",
+							"href": "https://www.youtube.com/watch?v=9jPSSWCKI5Y&feature=emb_title&ab_channel=BackpainGames"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "First year GameDesign students"
+						}
+					]
+				},
+				{
+					"name": "Sansù",
+					"folderName": "sansu",
+					"video": true,
+					"videoEmbedID": "q1JuzaXRAFU",
+					"date": "2021",
+					"category": "ZHdK",
+					"claim": "VS Lords of the meat",
+					"tags": [
+						"coding",
+						"game-jam"
+					],
+					"viewAccess": [],
+					"description": [
+						"Sansū VS Lords of the meat is a hack'n'slash game, combined with a math fight mechanic. It was produced during an intern game jam (3 days) at the Zürich University of the Arts, with a team of 14 game design students."
+					],
+					"picsDescr": [
+						"Title Screen.",
+						"Math Attack (Screenshot).",
+						"Walking (Screenshot).",
+						"Credits."
+					],
+					"tasks": [
+						"System Programming"
+					],
+					"quickLinks": [
+						{
+							"label": "Download",
+							"href": "https://leapero.itch.io/sansu-vs-lords-of-the-meat"
+						},
+						{
+							"label": "Trailer",
+							"href": "https://youtu.be/V6LqDupIPjg"
+						},
+						{
+							"label": "Gameplay",
+							"href": "https://youtu.be/6iDEsS5UKgc"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "GameDesign Students"
+						}
+					]
+				},
+				{
+					"name": "Hangry Frogs",
+					"folderName": "hangryfrogs",
+					"video": true,
+					"videoEmbedID": "wwUVa2WuMmk",
+					"date": "2020",
+					"category": "ZHdK",
+					"claim": "- On Ice",
+					"tags": [
+						"concept",
+						"coding",
+						"sound"
+					],
+					"percentage": 50,
+					"viewAccess": [],
+					"description": [
+						"As soon as winter dawns, the fierce fight for the last food begins.",
+						"In this 2 player game hangry frogs duel each other for the last, already frozen, fly on the icy lake. The frog can be rotated by the joystick. To interact with the world, its tongue can be stuck out with a button press.",
+						"Play with your family, friends or frenemies and find out who is the better (hangry) frog!"
+					],
+					"picsDescr": [
+						"Main Menu (Screenshot).",
+						"Intro Cutscene (Screenshot).",
+						"Midgame (Screenshot).",
+						"End Screen (Screenshot)."
+					],
+					"tasks": [
+						"Level Design",
+						"System Programming",
+						"Soundtracks",
+						"Sound Effects"
+					],
+					"quickLinks": [
+						{
+							"label": "Download",
+							"href": "https://lenzkleiser.itch.io/hangry-frogs-on-ice"
+						},
+						{
+							"label": "Trailer",
+							"href": "https://www.youtube.com/watch?v=cFMsNZKugJg&feature=emb_title"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@lunaelaine",
+							"href": "https://luna-elaine.com/"
+						}
+					]
+				},
+				{
+					"name": "Project Zagreus",
+					"folderName": "projectzagreus",
+					"video": true,
+					"videoEmbedID": "C1-K_TAA1tQ",
+					"date": "2021",
+					"category": "ZHdK",
+					"tags": [
+						"concept",
+						"storytelling"
+					],
+					"percentage": 25,
+					"viewAccess": [],
+					"description": [
+						"RRI Inc. is a company specialised in the investigation of shipwrecks and retrieving blackboxes for insurance and criminal investigation purposes.",
+						"You have been working for the company for years, but never experienced a case like this one. An unknown ship has sunken under strange circumstances.",
+						"Dive into the claustrophobic corridors of the sunken colossus to find out the truth. Experience one of your colleagues turning against you, while unknown creatures lurk in the dark abyss of the sea."
+					],
+					"picsDescr": [
+						"Midgame (Screenshot).",
+						"Midgame (Screenshot).",
+						"Midgame (Screenshot).",
+						"Leviathan (Artwork)."
+					],
+					"tasks": [
+						"Story Writing"
+					],
+					"quickLinks": [
+						{
+							"label": "Download",
+							"href": "https://lenzkleiser.itch.io/project-zagreus"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@milkimoone",
+							"href": "https://www.instagram.com/milkimoone"
+						},
+						{
+							"label": "@AnjaSchrodin",
+							"href": "https://www.instagram.com/lyannjohnes"
+						},
+						{
+							"label": "@SamuelKnüsel",
+							"href": "https://jestercap.itch.io/"
+						},
+						{
+							"label": "@RobinGood",
+							"href": "https://www.portfolio-robingood.com/"
+						}
+					]
+				}
+			]
+		}
+	]
+}

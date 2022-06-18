@@ -11,7 +11,7 @@ export default class ProjectCard extends Component {
     getCollaborationString = () => {
         let str = "Collaboration with: ";
         this.props.project.collaborators.map(c => {
-            str += c.name;
+            str += c.label;
             if(!this.props.project.collaborators.indexOf(c, 0) === this.props.project.collaborators.length -1)
                 str += ", ";
             return str;
@@ -24,7 +24,7 @@ export default class ProjectCard extends Component {
             <div className={this.props.isFirst? "d-card-wrapper d-card-wrapper-first" : "d-card-wrapper"}>
             <div className="d-card">
             {/* Image Container */}
-                <div className="d-card-img-container" id={`imgContainer${this.props.project.key}`}>
+                <div className="d-card-img-container" id={`imgContainer${this.props.listID}`}>
                         {/* Video */}
                         {this.props.project.video &&
                             //<Video className="d-card-img-main d-card-img" autoPlay loop={true} muted controls webkit-playsinline="true" playsInline cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
@@ -43,7 +43,7 @@ export default class ProjectCard extends Component {
                         </div>
                 </div>
                 {/* Text Container */}
-                <div className="d-card-text-container" id={`textContainer${this.props.project.key}`}>
+                <div className="d-card-text-container" id={`textContainer${this.props.listID}`}>
                     <div className="d-card-title-container">
                         <h1 className="p header d-card-title">{this.props.project.name} {this.props.project.claim}
                         <sup style={{fontSize:"20px"}}> ({this.props.project.date})
@@ -58,9 +58,9 @@ export default class ProjectCard extends Component {
                     </div>
                     {/* Project Description */}
                     <div className="p p-body d-card-description">
-                        {this.props.project.desctiption.map((p)=>{
+                        {this.props.project.description.map((p)=>{
                             return(
-                                <div style={{marginBottom:"13px"}} key={this.props.project.desctiption.indexOf(p, 0)}>{p}</div>
+                                <div style={{marginBottom:"13px"}} key={this.props.project.description.indexOf(p, 0)}>{p}</div>
                             )
                         })}
                         {/* Collaborator info */}
@@ -71,9 +71,9 @@ export default class ProjectCard extends Component {
                                 return (
                                     c.href != null ?
                                         <a className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" href={c.href} target="_blank" rel='noreferrer'
-                                        style={{verticalAlign: "top", marginLeft: "10px"}} key={this.props.project.collaborators.indexOf(c)}> {c.name} </a>
+                                        style={{verticalAlign: "top", marginLeft: "10px"}} key={this.props.project.collaborators.indexOf(c)}> {c.label} </a>
                                         :
-                                        <p style={{verticalAlign: "top", marginLeft: "10px", display: "inline"}} key={this.props.project.collaborators.indexOf(c)}> {c.name} </p> 
+                                        <p style={{verticalAlign: "top", marginLeft: "10px", display: "inline"}} key={this.props.project.collaborators.indexOf(c)}> {c.label} </p> 
                                 );
                             })}
                         </div>}
@@ -88,7 +88,7 @@ export default class ProjectCard extends Component {
                     })}
                     </ul>
                     {this.props.project.percentage &&
-                    <WorkPercentage perc={this.props.project.percentage} id={this.props.project.key}/>
+                    <WorkPercentage perc={this.props.project.percentage} id={this.props.listID}/>
                     }
                     </div>
                     {/* Quick Links Right */}
@@ -97,7 +97,7 @@ export default class ProjectCard extends Component {
                     }
                 </div>
             </div>
-            <Arrows sectionName={this.props.sectionName} curProjIndex={this.props.project.key} isLast={this.props.isLast}/>
+            <Arrows sectionName={this.props.sectionName} curProjIndex={this.props.listID} isLast={this.props.isLast}/>
             </div>
         );
     }

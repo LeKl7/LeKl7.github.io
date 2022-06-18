@@ -4,7 +4,6 @@ import '../styles/topnav.css';
 export default class WorkPercentage extends React.Component {
     draw = () => 
     {
-        console.log("draw");
         var canvas = document.getElementById(`work-percentage-${this.props.id}`);
         var color = document.documentElement.style.getPropertyValue('--secondary-color');
         if (canvas.getContext)
@@ -39,6 +38,7 @@ export default class WorkPercentage extends React.Component {
     }
     render() {
         return (
+            this.props.perc !== 0 &&
             <div className="work-percentage-container">
             <div className="p p-body d-card-description" style={{marginRight: "10px"}}>Overall contribution: </div>
             <canvas className="work-percentage" id={`work-percentage-${this.props.id}`} width="50px" height="50px"> </canvas>

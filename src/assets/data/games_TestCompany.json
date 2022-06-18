@@ -1,0 +1,68 @@
+{
+	"data": [
+		{
+			"title": "Client Games",
+			"projects": []
+		},
+		{
+			"title": "Personal Games",
+			"projects": [
+				{
+					"name": "Planethesis",
+					"folderName": "planethesis",
+					"video": true,
+					"videoEmbedID": "Dd6DzHlILEk",
+					"date": "2020",
+					"category": "Personal",
+					"tags": [
+						"concept",
+						"coding",
+						"game-jam"
+					],
+					"percentage": 33,
+					"viewAccess": [
+						"TestCompany"
+					],
+					"description": [
+						"A war is raging between Church and Science, but only one party can come through as victorious! Decide whether the world will follow the holy path alongsit or trust in the works of Galileo Galilei.",
+						"Choose your stand and don’t let the other side take over the Universe!"
+					],
+					"picsDescr": [
+						"Start Screen (Screenshot).",
+						"Mid Game (Screenshot).",
+						"Mid Game (Screenshot).",
+						"Credits (Screenshot)."
+					],
+					"tasks": [
+						"Developement of concept",
+						"Coding of the entire project"
+					],
+					"quickLinks": [
+						{
+							"label": "Play",
+							"href": "https://lulatschia.itch.io/planethesis"
+						},
+						{
+							"label": "Trailer",
+							"href": "https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@ManuelWirth",
+							"href": "https://www.manuelwirth.ch/"
+						},
+						{
+							"label": "@lulatschia",
+							"href": "https://lulatschia.myportfolio.com/"
+						}
+					]
+				}
+			]
+		},
+		{
+			"title": "ZHdK Games",
+			"projects": []
+		}
+	]
+}
