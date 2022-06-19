@@ -3,6 +3,7 @@ import '../styles/tags.css';
 import Arrows from './Arrows'
 import ClickableImage from '../modules/ClickableImage';
 import QuickLinks from '../modules/QuickLinks';
+import Exhibions from '../modules/Exhibitions';
 import WorkPercentage from "../modules/WorkPercentage"
 import {Video} from 'cloudinary-react';
 import YoutubeEmbed from "../modules/YoutubeEmbed";
@@ -95,6 +96,10 @@ export default class ProjectCard extends Component {
                     {this.props.project.quickLinks != null &&
                         <QuickLinks links={this.props.project.quickLinks}/>
                     }
+                    {/* Exhibitions-panel
+                    {this.props.project.exhibitions != null &&
+                        <Exhibions exhibitions={this.props.project.exhibitions}/>
+                    } */}
                 </div>
             </div>
             <Arrows sectionName={this.props.sectionName} curProjIndex={this.props.listID} isLast={this.props.isLast}/>

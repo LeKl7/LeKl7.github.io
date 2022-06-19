@@ -6,16 +6,17 @@ import Logo from './Logo';
 import SocialMedia from '../modules/SocialMedia';
 import {FaBars,FaTimes} from 'react-icons/fa';
 import DarkLightMode from '../modules/DarkLightMode';
+import { LinkWithQuery } from '../modules/LinkWithQuery';
 
 class NavItem extends React.Component {
     render() {
         return (
             <div className={`nav-item ${this.props.parCss}`}>
-            <Link to={this.props.path} 
+            <LinkWithQuery to={this.props.path} 
                 className={`p nav-text ${this.props.isactive? "hrv-shutter-out-vertical-focused" : ""} ${this.props.css} hvr-shutter-out-vertical`} 
                 onClick={() => this.props.onPathChange(this.props.path)}>
             {this.props.name}
-            </Link>
+            </LinkWithQuery>
             </div>
         );
     }
@@ -27,11 +28,11 @@ class TopNav extends React.Component {
         return (
             <div id="topnav-container" className={`${this.props.navExpanded ? "topnav-container-expanded" :""}`}>
                 {/* Logo */}
-                <Link className="logo-container" to="/" onClick={() => this.props.onPathChange("/")}>
+                <LinkWithQuery className="logo-container" to="/" onClick={() => this.props.onPathChange("/")}>
                     <div className="logo-container-inner">
                         <Logo darkMode={this.props.darkMode}/>
                     </div>
-                </Link>
+                </LinkWithQuery>
                 <div id={`topnav`} className={`${this.props.navExpanded ? "topnav-expanded" :""}`}>
                 {/* Routes */}
                 <div id={`topnav-routes-container`}>
@@ -58,11 +59,11 @@ class TopNavSmall extends React.Component {
         return (
             <>
             {/* Logo */}
-            <Link className="logo-container" to="/" onClick={() => this.props.onPathChange("/about")}>
+            <LinkWithQuery className="logo-container" to="/" onClick={() => this.props.onPathChange("/about")}>
                 <div className="logo-container-inner">
                 <Logo darkMode={this.props.darkMode}/>
                 </div>
-            </Link>
+            </LinkWithQuery>
             <div id="topnav-container">
                 <div id={`topnav`}>
                 <div style={{display: "flex", justifyContent: "flex-start"}}>

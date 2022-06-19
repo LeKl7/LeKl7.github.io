@@ -112,7 +112,9 @@
 						"concept"
 					],
 					"percentage": 33,
-					"viewAccess": [],
+					"viewAccess": [
+						"TestCompany"
+					],
 					"description": [
 						"A well-crafted dress makes all the difference in love. Help your customers in their pursuit of happiness.",
 						"From rag to silk is a skill game in which you have to operate a sewing machine. Speed and precision are the keys to success.",
@@ -156,7 +158,9 @@
 						"game-jam"
 					],
 					"percentage": 25,
-					"viewAccess": [],
+					"viewAccess": [
+						"TestCompany"
+					],
 					"description": [
 						"Fulfill the shadow girl's wishes by dragging the children's toys from the shelves and dropping them onto the table.",
 						"Recreate silhouettes close to the template in the spotlight to complete the level.",
@@ -243,7 +247,7 @@
 					"collaborators": [
 						{
 							"label": "@RahelGamma",
-							"href": "https://rahelgamma.itch.io/"
+							"href": "https://rahelgamma.c"
 						},
 						{
 							"label": "@YoshiZiegerli",
@@ -368,7 +372,9 @@
 						"coding",
 						"game-jam"
 					],
-					"viewAccess": [],
+					"viewAccess": [
+						"TestCompany"
+					],
 					"description": [
 						"Sansū VS Lords of the meat is a hack'n'slash game, combined with a math fight mechanic. It was produced during an intern game jam (3 days) at the Zürich University of the Arts, with a team of 14 game design students."
 					],
@@ -447,58 +453,6 @@
 						{
 							"label": "@lunaelaine",
 							"href": "https://luna-elaine.com/"
-						}
-					]
-				},
-				{
-					"name": "Project Zagreus",
-					"folderName": "projectzagreus",
-					"video": true,
-					"videoEmbedID": "C1-K_TAA1tQ",
-					"date": "2021",
-					"category": "ZHdK",
-					"tags": [
-						"concept",
-						"storytelling"
-					],
-					"percentage": 25,
-					"viewAccess": [],
-					"description": [
-						"RRI Inc. is a company specialised in the investigation of shipwrecks and retrieving blackboxes for insurance and criminal investigation purposes.",
-						"You have been working for the company for years, but never experienced a case like this one. An unknown ship has sunken under strange circumstances.",
-						"Dive into the claustrophobic corridors of the sunken colossus to find out the truth. Experience one of your colleagues turning against you, while unknown creatures lurk in the dark abyss of the sea."
-					],
-					"picsDescr": [
-						"Midgame (Screenshot).",
-						"Midgame (Screenshot).",
-						"Midgame (Screenshot).",
-						"Leviathan (Artwork)."
-					],
-					"tasks": [
-						"Story Writing"
-					],
-					"quickLinks": [
-						{
-							"label": "Download",
-							"href": "https://lenzkleiser.itch.io/project-zagreus"
-						}
-					],
-					"collaborators": [
-						{
-							"label": "@milkimoone",
-							"href": "https://www.instagram.com/milkimoone"
-						},
-						{
-							"label": "@AnjaSchrodin",
-							"href": "https://www.instagram.com/lyannjohnes"
-						},
-						{
-							"label": "@SamuelKnüsel",
-							"href": "https://jestercap.itch.io/"
-						},
-						{
-							"label": "@RobinGood",
-							"href": "https://www.portfolio-robingood.com/"
 						}
 					]
 				}

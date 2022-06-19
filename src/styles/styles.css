@@ -103,6 +103,10 @@ position: absolute;
 .quick-links-container {
     align-self: flex-end;
 }
+.exhibitions-container {
+    align-self: flex-end;
+    /* background-color: var(--secondary-color); */
+}
 .work-percentage-container {
     margin-bottom: 30px;
     margin-left: 10px;

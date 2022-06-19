@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/styles.css';
 import LogoFull from '../modules/LogoFull'
+import { LinkWithQuery } from '../modules/LinkWithQuery';
 import { BrowserRouter as Router, Route, Link, withRouter} from "react-router-dom";
 
 export default class Home extends React.Component {
@@ -27,9 +28,9 @@ export default class Home extends React.Component {
                 <div className="d-card-text-container">
                     <div className="p p-body d-card-description" style={{alignSelf : "center", marginLeft: "0px"}}>
                       Hi! I'm 
-                      <Link to={"/about"} 
+                      <LinkWithQuery to={"/about"} 
                       className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px"}} 
-                      onClick={() => this.props.onPathChange("/about")}> Lorenz </Link>
+                      onClick={() => this.props.onPathChange("/about")}> Lorenz </LinkWithQuery>
                       . I primarily do 
                       <div className={`p d-card-tag coding`} style={{marginLeft : "0.3em"}}></div> 
                       and 
@@ -38,13 +39,13 @@ export default class Home extends React.Component {
                     </div>
                     <div className="p p-body d-card-description" style={{alignSelf : "center", marginLeft: "0px"}}>
                       Check out my 
-                      <Link to={"/games"} 
+                      <LinkWithQuery to={"/games"} 
                       className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px", marginRight:"5px"}} 
-                      onClick={() => this.props.onPathChange("/games")}>games</Link>
+                      onClick={() => this.props.onPathChange("/games")}>games</LinkWithQuery>
                       and 
-                      <Link to={"/projects"} 
+                      <LinkWithQuery to={"/projects"} 
                       className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px"}} 
-                      onClick={() => this.props.onPathChange("/projects")}>projects</Link>
+                      onClick={() => this.props.onPathChange("/projects")}>projects</LinkWithQuery>
                       !
                     </div>
                   </div>

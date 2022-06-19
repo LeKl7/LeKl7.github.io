@@ -16,7 +16,9 @@
 						"extension"
 					],
 					"percentage": 100,
-					"viewAccess": [],
+					"viewAccess": [
+						"TestCompany"
+					],
 					"description": [
 						"When doing procedural visuals you are in need of tileable textures. With this tool you will never have to search the internet again! Create and save textures within the Unity Editor.",
 						"Features include tileable 2D / 3D noise, which can be combined and modified to fit your needs. Afterwards, the textures can be saved as .png or as .asset files.",
@@ -97,7 +99,9 @@
 						"coding"
 					],
 					"percentage": 25,
-					"viewAccess": [],
+					"viewAccess": [
+						"TestCompany"
+					],
 					"description": [
 						"We humans collect things. Things that remind us of something. Many of them are important to us, however we can not grasp them because they do not exist physically.",
 						"Let's make the intangible tangible again. Through the embodiment and presence of data in a space, RooMe blurs the boundaries between physical and digital."
@@ -147,7 +151,9 @@
 						"game-design"
 					],
 					"percentage": 50,
-					"viewAccess": [],
+					"viewAccess": [
+						"TestCompany"
+					],
 					"description": [
 						"Marble Escape is a competitive marble-racing boardgame through three layers of a labyrinth.",
 						"Swap black tiles to change the labyrinth. Outsmart your opponent by blocking his way but opening the way to victory for yourself."
@@ -212,51 +218,6 @@
 					]
 				},
 				{
-					"name": "Heather Gray",
-					"folderName": "heathergray",
-					"video": true,
-					"videoEmbedID": "vze3jWtvbZs",
-					"date": "2022",
-					"category": "ZHdK",
-					"tags": [
-						"visuals",
-						"sound"
-					],
-					"percentage": 33,
-					"viewAccess": [],
-					"description": [
-						"You are a sprayer in an abandoned school. It is dark and quiet, at least until you realize you’re not alone. Heather Gray, a schoolgirl, is missing since a few months. You may find out where she is held.",
-						"We were tasked to create the first minutes of a immersive walking simulator with AAA graphics. Everything was modeled and textured by ourselves, it was recorded in realtime in Unity, the sound was added in post."
-					],
-					"picsDescr": [
-						"Fictional Start Screen.",
-						"View on the elevator (Screenshot).",
-						"View on the school building (Screenshot).",
-						"Close-up elevator (Screenshot)."
-					],
-					"tasks": [
-						"I was responsible from 01:36 to 03:51.",
-						"3D Modeling, Visual Effects",
-						"Sound design"
-					],
-					"quickLinks": [
-						{
-							"label": "Gameplay",
-							"href": "https://youtu.be/TCC2GkF25bM"
-						}
-					],
-					"collaborators": [
-						{
-							"label": "@milkimoone",
-							"href": "https://www.instagram.com/milkimoone"
-						},
-						{
-							"label": "@RobinGood",
-							"href": "https://www.portfolio-robingood.com/"
-						}
-					]
-				},
-				{
 					"name": "Too MUCH!",
 					"folderName": "toomuch",
 					"video": true,
@@ -268,7 +229,9 @@
 						"coding"
 					],
 					"percentage": 100,
-					"viewAccess": [],
+					"viewAccess": [
+						"TestCompany"
+					],
 					"description": [
 						"Do you ever feel overwhelmed by too much affection? I know, happens to me all the time too! Slap your obnoxious punter away before they can reach your heart and trap it forerver.",
 						"In this project, I created a game given the theme \"I have nothing, if I don't have you\". It was programmed in Processing."
@@ -281,43 +244,6 @@
 					],
 					"tasks": [
 						"Programming in the program Processing"
-					]
-				},
-				{
-					"name": "Send NEWS!",
-					"folderName": "sendnews",
-					"video": true,
-					"videoEmbedID": "1ZWumjEy5jU",
-					"date": "2020",
-					"category": "ZHdK",
-					"tags": [
-						"storytelling",
-						"coding"
-					],
-					"percentage": 50,
-					"viewAccess": [],
-					"description": [
-						"This project deals with the digital and volatile interactions as well as the news overflow during the corona pandemic.",
-						"In the background, both visually and auditive, there's constant news about corona in 25 different languages. Only by interacting with others, as distant and mediated as they may seem, you can silence the intense stream of bad news. At least just for a moment.",
-						"\"Send NEWS!\" is a realtime chat application, playable in the browser, in which up to 10 people can talk to each other."
-					],
-					"picsDescr": [
-						"Midgame (Screenshot).",
-						"Midgame (Screenshot).",
-						"Midgame (Screenshot).",
-						"Midgame with multiple connections (Screenshot)."
-					],
-					"tasks": [
-						"Text shader",
-						"Game programming",
-						"Webserver setup",
-						"Sound Design"
-					],
-					"collaborators": [
-						{
-							"label": "@lunaelaine",
-							"href": "https://luna-elaine.com/"
-						}
 					]
 				}
 			]

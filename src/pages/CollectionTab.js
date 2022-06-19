@@ -23,8 +23,6 @@ export default class CollectionTab extends React.Component {
     }
 
     render() {
-        // let { id } = this.props.match.params;  // Unpacking and retrieve id
-        // console.log(id)
         return (   
             <>
             <section className="d-body" id="0">

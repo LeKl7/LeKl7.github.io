@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { BrowserRouter as Router, Route, Switch, useLocation, useParams} from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch, useLocation} from "react-router-dom";
 import Topnav from './modules/Topnav';
 import Modal from './modules/Modal';
 import Home from './pages/Home';
@@ -9,7 +9,9 @@ import CollectionTab from './pages/CollectionTab';
 import Contact from './pages/Contact';
 
 import GamesData from './assets/data/games.json';
+import GamesDataTestCompany from './assets/data/games_TestCompany.json';
 import ProjectData from './assets/data/projects.json';
+import ProjectDataTestCompany from './assets/data/projects_TestCompany.json';
 
 class App extends Component {
     constructor(props) {
@@ -59,6 +61,22 @@ class App extends Component {
 
         this.defaultBodyPadding = 0;
     }
+
+    getCollection(isGame, tailoredKey) {
+        if(isGame) {
+            switch(tailoredKey) {
+                default: return GamesData;
+                case "TestCompany": return GamesDataTestCompany;
+            }
+        }
+        else {
+            switch(tailoredKey) {
+                default: return ProjectData;
+                case "TestCompany": return ProjectDataTestCompany;
+            }
+        }
+    }
+
     componentDidMount() {
         window.addEventListener("resize", this.handleResize);
         this.setHeight(this.props.path);
@@ -84,7 +102,8 @@ class App extends Component {
     }
     setHeight = (path) => {
         const rootElement = document.getElementById('root');
-        const height = path === "/projects" ? this.getHeight() + 1 : 1;
+        const height = path === "/projects" ? 1 : 1;
+        //const height = path === "/projects" ? this.getHeight() + 1 : 1;
         rootElement.style.minHeight = `${(height*100).toString()}vh`;
     }
     onPathChange = (path) => {
@@ -147,20 +166,7 @@ class App extends Component {
 
 
     render() {
-        const WrappedCollectionTab = (props) => {
-            const params = useParams();
-            return (<CollectionTab 
-            projectCollection={this.gameCollection.data} 
-            navExpanded={this.state.navExpanded} 
-            setBodyPadding={this.setBodyPaddig} 
-            onImgClick={(string) => this.openModal(string)} 
-            onFilterToggle={() => this.onFilterToggle()} 
-            onFilterChange={(string)=> this.onFilterChange(string)} 
-            filterExpanded={this.state.filterOpen}
-            filter={this.state.filter}
-            {...{...props, match: {params}} }
-            />);
-          }
+        console.log(this.props.query.get('tailored'))
         return (
         <Router > {/*basename='lekl7.github.io'*/}
             <div>
@@ -175,7 +181,7 @@ class App extends Component {
                 <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig} onPathChange={this.onPathChange}/>}/>
                 <Route path="/about" render={()=><About setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route path="/games" render={()=><CollectionTab 
-                    projectCollection={this.gameCollection.data} 
+                    projectCollection={this.getCollection(true, this.props.query.get('tailored')).data} 
                     navExpanded={this.state.navExpanded} 
                     setBodyPadding={this.setBodyPaddig} 
                     onImgClick={(string) => this.openModal(string)} 
@@ -184,10 +190,8 @@ class App extends Component {
                     filterExpanded={this.state.filterOpen}
                     filter={this.state.filter}
                     />}/>
-                <Route path="/games/:id" render={() => <WrappedCollectionTab/>}/>
-                
                 <Route path="/projects" render={()=><CollectionTab 
-                    projectCollection={this.projectCollection.data} 
+                    projectCollection={this.getCollection(false, this.props.query.get('tailored')).data} 
                     navExpanded={this.state.navExpanded} 
                     setBodyPadding={this.setBodyPaddig} 
                     onImgClick={(string) => this.openModal(string)} 
@@ -206,6 +210,10 @@ class App extends Component {
 }
 
 export default function RoutedApp (props) {
+    function useQuery() {
+        const { search } = useLocation();
+        return React.useMemo(() => new URLSearchParams(search), [search]);
+      }
     const path = useLocation().pathname;
-    return <App path={path}></App>;
+    return <App path={path} query={useQuery()}></App>;
 };
