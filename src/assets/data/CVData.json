@@ -1,0 +1,29 @@
+{
+	"data": [
+		{
+			"title": "Career",
+			"points": [
+				{
+					"name": "Bachelor Computer Science",
+					"location": "FernUniversität Hagen, Hagen DE",
+					"dates": "2020 - (2026) "
+				},
+				{
+					"name": "Bachelor Game Design",
+					"location": "ZHdK University of the Arts, Zürich CH",
+					"dates": "2019 - (2023)"
+				},
+				{
+					"name": "Internship",
+					"location": "Okomotive, Zürich CH",
+					"dates": "July - August 2022"
+				},
+				{
+					"name": "High School Diploma",
+					"location": "Grammar School Unterstrass, Zürich CH",
+					"dates": "2015 - 2019"
+				}
+			]
+		}
+	]
+}

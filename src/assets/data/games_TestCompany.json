@@ -208,6 +208,61 @@
 							"label": "GameDesign Students"
 						}
 					]
+				},
+				{
+					"name": "Project Zagreus",
+					"folderName": "projectzagreus",
+					"video": true,
+					"videoEmbedID": "C1-K_TAA1tQ",
+					"date": "2021",
+					"category": "ZHdK",
+					"tags": [
+						"concept",
+						"storytelling"
+					],
+					"percentage": 25,
+					"viewAccess": [
+						"TestCompany",
+						"HidePublicly"
+					],
+					"description": [
+						"RRI Inc. is a company specialised in the investigation of shipwrecks and retrieving blackboxes for insurance and criminal investigation purposes.",
+						"You have been working for the company for years, but never experienced a case like this one. An unknown ship has sunken under strange circumstances.",
+						"Dive into the claustrophobic corridors of the sunken colossus to find out the truth. Experience one of your colleagues turning against you, while unknown creatures lurk in the dark abyss of the sea."
+					],
+					"picsDescr": [
+						"Midgame (Screenshot).",
+						"Midgame (Screenshot).",
+						"Midgame (Screenshot).",
+						"Leviathan (Artwork)."
+					],
+					"tasks": [
+						"Story Writing"
+					],
+					"quickLinks": [
+						{
+							"label": "Download",
+							"href": "https://lenzkleiser.itch.io/project-zagreus"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@milkimoone",
+							"href": "https://www.instagram.com/milkimoone"
+						},
+						{
+							"label": "@AnjaSchrodin",
+							"href": "https://www.instagram.com/lyannjohnes"
+						},
+						{
+							"label": "@SamuelKnüsel",
+							"href": "https://jestercap.itch.io/"
+						},
+						{
+							"label": "@RobinGood",
+							"href": "https://www.portfolio-robingood.com/"
+						}
+					]
 				}
 			]
 		}

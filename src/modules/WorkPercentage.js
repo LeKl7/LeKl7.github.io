@@ -27,12 +27,12 @@ export default class WorkPercentage extends React.Component {
             ctx.closePath();
             ctx.fill();
         }
-/*         canvas.style = {color: "var(--secondary-color)"}
- */    }
+    }
+
     getAngleFromPerc = (perc) => {
         return -Math.PI/2 + (3*Math.PI/2 + Math.PI/2) * (perc - 0) / (100 - 0);
-
     }
+
     componentDidMount() {
         this.draw();
     }

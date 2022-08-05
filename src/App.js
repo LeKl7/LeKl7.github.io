@@ -8,6 +8,7 @@ import { NoMatch } from './pages/NoMatch';
 import CollectionTab from './pages/CollectionTab';
 import Contact from './pages/Contact';
 
+import CVData from './assets/data/CVData.json';
 import GamesData from './assets/data/games.json';
 import GamesDataTestCompany from './assets/data/games_TestCompany.json';
 import ProjectData from './assets/data/projects.json';
@@ -166,7 +167,6 @@ class App extends Component {
 
 
     render() {
-        console.log(this.props.query.get('tailored'))
         return (
         <Router > {/*basename='lekl7.github.io'*/}
             <div>
@@ -179,7 +179,7 @@ class App extends Component {
             
             <Switch>
                 <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig} onPathChange={this.onPathChange}/>}/>
-                <Route path="/about" render={()=><About setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
+                <Route path="/about" render={()=><About data={CVData} setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route path="/games" render={()=><CollectionTab 
                     projectCollection={this.getCollection(true, this.props.query.get('tailored')).data} 
                     navExpanded={this.state.navExpanded} 
