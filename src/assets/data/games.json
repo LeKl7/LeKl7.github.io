@@ -313,6 +313,56 @@
 					]
 				},
 				{
+					"name": "Heatbeats And Brainwaves",
+					"folderName": "beatsnbrains",
+					"video": true,
+					"videoEmbedID": "MfxMJJZBkR4",
+					"date": "2022",
+					"category": "ZHdK",
+					"tags": [
+						"concept",
+						"coding",
+						"sound"
+					],
+					"percentage": 50,
+					"viewAccess": [],
+					"description": [
+						"Experience a cooperative game about communication with split senses where one player, the heart, only hears but does not see and the other player, the brain, only sees but does not hear. Prove your teamwork and heal the broken body. Solve puzzles while communicating using heartbeats, brainwaves and more."
+					],
+					"picsDescr": [
+						"Migame (Screenshot).",
+						"Intro Cutscene (Screenshot).",
+						"Midgame (Screenshot).",
+						"Setup (Photo)."
+					],
+					"tasks": [
+						"Entire programming",
+						"Sound design",
+						"Trailer",
+						"Feel design"
+					],
+					"quickLinks": [
+						{
+							"label": "Download",
+							"href": "https://lenzkleiser.itch.io/heartbeats-and-brainwaves"
+						},
+						{
+							"label": "Trailer",
+							"href": "https://www.youtube.com/watch?v=LW6m0nFuR0A"
+						},
+						{
+							"label": "Gameplay",
+							"href": "https://youtu.be/rQeI1Rx2FHk"
+						}
+					],
+					"collaborators": [
+						{
+							"label": "@lunaelaine",
+							"href": "https://luna-elaine.com/"
+						}
+					]
+				},
+				{
 					"name": "Heels 'n Feels",
 					"folderName": "heelsnfeels",
 					"video": true,
@@ -372,7 +422,7 @@
 						"TestCompany"
 					],
 					"description": [
-						"Sansū VS Lords of the meat is a hack'n'slash game, combined with a math fight mechanic. It was produced during an intern game jam (3 days) at the Zürich University of the Arts, with a team of 14 game design students."
+						"Sansū VS Lords of the meat is a hack'n'slash game, combined with a math fight mechanic. It was produced during an internal game jam (3 days) at the Zürich University of the Arts, with a team of 14 game design students."
 					],
 					"picsDescr": [
 						"Title Screen.",
@@ -399,56 +449,46 @@
 					],
 					"collaborators": [
 						{
-							"label": "GameDesign Students"
+							"label": "Game Design Students"
 						}
 					]
 				},
 				{
-					"name": "Hangry Frogs",
-					"folderName": "hangryfrogs",
+					"name": "BIRBS",
+					"folderName": "birbs",
 					"video": true,
-					"videoEmbedID": "wwUVa2WuMmk",
-					"date": "2020",
+					"videoEmbedID": "RcB1PsSrrbI",
+					"date": "2022",
 					"category": "ZHdK",
-					"claim": "- On Ice",
 					"tags": [
 						"concept",
 						"coding",
-						"sound"
+						"visuals"
 					],
-					"percentage": 50,
+					"percentage": 100,
 					"viewAccess": [],
 					"description": [
-						"As soon as winter dawns, the fierce fight for the last food begins.",
-						"In this 2 player game hangry frogs duel each other for the last, already frozen, fly on the icy lake. The frog can be rotated by the joystick. To interact with the world, its tongue can be stuck out with a button press.",
-						"Play with your family, friends or frenemies and find out who is the better (hangry) frog!"
+						"Grab Birbs and place them on power cables to produce generative music. ",
+						"This project focuses on the visuals, which are completely generative. Everything is rendered with a shader, the scene consists of no 3D models."
 					],
 					"picsDescr": [
-						"Main Menu (Screenshot).",
-						"Intro Cutscene (Screenshot).",
-						"Midgame (Screenshot).",
-						"End Screen (Screenshot)."
+						"Start Screen (Screenshot).",
+						"Midgame (Photo).",
+						"Clouds (Screenshot).",
+						"Midgame (Screenshot)."
 					],
 					"tasks": [
-						"Level Design",
-						"System Programming",
-						"Soundtracks",
-						"Sound Effects"
+						"Entire programming",
+						"Shaders"
 					],
 					"quickLinks": [
 						{
-							"label": "Download",
-							"href": "https://lenzkleiser.itch.io/hangry-frogs-on-ice"
+							"label": "Trailer",
+							"href": "https://youtu.be/Lojjd5JXkCs"
 						},
 						{
-							"label": "Trailer",
-							"href": "https://www.youtube.com/watch?v=cFMsNZKugJg&feature=emb_title"
-						}
-					],
-					"collaborators": [
-						{
-							"label": "@lunaelaine",
-							"href": "https://luna-elaine.com/"
+							"label": "Gameplay",
+							"href": "https://youtu.be/am77beBliis"
 						}
 					]
 				}

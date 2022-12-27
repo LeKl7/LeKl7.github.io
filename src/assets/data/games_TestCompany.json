@@ -178,7 +178,7 @@
 						"TestCompany"
 					],
 					"description": [
-						"Sansū VS Lords of the meat is a hack'n'slash game, combined with a math fight mechanic. It was produced during an intern game jam (3 days) at the Zürich University of the Arts, with a team of 14 game design students."
+						"Sansū VS Lords of the meat is a hack'n'slash game, combined with a math fight mechanic. It was produced during an internal game jam (3 days) at the Zürich University of the Arts, with a team of 14 game design students."
 					],
 					"picsDescr": [
 						"Title Screen.",
@@ -205,7 +205,7 @@
 					],
 					"collaborators": [
 						{
-							"label": "GameDesign Students"
+							"label": "Game Design Students"
 						}
 					]
 				},
