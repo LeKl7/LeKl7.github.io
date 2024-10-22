@@ -8,7 +8,9 @@ export default class Home extends React.Component {
     componentDidMount() {
       this.props.setBodyPadding();
       this.updateLogoSize();
+      window.scrollTo(0, 0);
     }
+    
     updateLogoSize = () => {
         //Calculate Logo Size
         this.desiredSize = Math.floor(window.innerHeight / 1.5);
@@ -24,21 +26,14 @@ export default class Home extends React.Component {
         return (        
             <section className="d-body">
             <div className="d-card-wrapper" style={{flexFlow : "column", marginBottom: "3%", marginTop: "3%"}}>
-            <LogoFull/>
+            <LogoFull darkMode={this.props.darkMode}/>
                 <div className="d-card-text-container">
                     <div className="p p-body d-card-description" style={{alignSelf : "center", marginLeft: "0px"}}>
                       Hi! I'm 
                       <LinkWithQuery to={"/about"} 
                       className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px"}} 
                       onClick={() => this.props.onPathChange("/about")}> Lorenz </LinkWithQuery>
-                      . I primarily do 
-                      <div className={`p d-card-tag coding`} style={{marginLeft : "0.3em"}}></div> 
-                      and 
-                      <div className={`p d-card-tag game-design`} style={{marginLeft : "0.3em"}}></div> 
-                      .
-                    </div>
-                    <div className="p p-body d-card-description" style={{alignSelf : "center", marginLeft: "0px"}}>
-                      Check out my 
+                      . Check out my 
                       <LinkWithQuery to={"/games"} 
                       className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" style={{marginBottom: "4px", marginLeft: "5px", marginRight:"5px"}} 
                       onClick={() => this.props.onPathChange("/games")}>games</LinkWithQuery>

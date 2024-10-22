@@ -12,7 +12,7 @@
 					"category": "Client",
 					"tags": [
 						"concept",
-						"visuals",
+						"techart",
 						"coding"
 					],
 					"percentage": 100,
@@ -48,153 +48,143 @@
 			"title": "Personal Games",
 			"projects": [
 				{
-					"name": "Planethesis",
-					"folderName": "planethesis",
+					"name": "Herdling",
+					"folderName": "herdling",
 					"video": true,
-					"videoEmbedID": "Dd6DzHlILEk",
-					"date": "2020",
+					"videoEmbedID": "jQ6sjK3WEFg",
+					"date": "2025",
 					"category": "Personal",
 					"tags": [
-						"concept",
-						"coding",
-						"game-jam"
+						"coding"
 					],
-					"percentage": 33,
-					"viewAccess": [
-						"TestCompany"
-					],
+					"viewAccess": [],
 					"description": [
-						"A war is raging between Church and Science, but only one party can come through as victorious! Decide whether the world will follow the holy path alongsit or trust in the works of Galileo Galilei.",
-						"Choose your stand and don’t let the other side take over the Universe!"
+						"Head out on a grand alpine expedition with a herd of loveable beasts, as you ascend a mountain path, encounter eerie dangers and surprising obstacles, and forge your way to the mystery at the summit.",
+						"Herdling"
 					],
 					"picsDescr": [
-						"Start Screen (Screenshot).",
-						"Mid Game (Screenshot).",
-						"Mid Game (Screenshot).",
-						"Credits (Screenshot)."
+						"Animals on the plains (Screenshot).",
+						"Guding animals through rivers (Screenshot).",
+						"Up to the mountain pass (Screenshot).",
+						"Via taming animals (Screenshot)."
 					],
 					"tasks": [
-						"Developement of concept",
-						"Coding of the entire project"
+						"Coding"
 					],
 					"quickLinks": [
 						{
-							"label": "Play",
-							"href": "https://lulatschia.itch.io/planethesis"
+							"label": "Steam",
+							"href": "https://store.steampowered.com/app/3047750/Herdling/"
 						},
 						{
 							"label": "Trailer",
-							"href": "https://www.youtube.com/watch?v=Dd6DzHlILEk&feature=emb_title&ab_channel=TheKleiserBros"
+							"href": "https://www.youtube.com/watch?v=tUEcKBVzhQg&ab_channel=Panic"
 						}
 					],
 					"collaborators": [
 						{
-							"label": "@ManuelWirth",
-							"href": "https://www.manuelwirth.ch/"
+							"label": "@Okomotive",
+							"href": "https://www.okomotive.ch/"
 						},
-						{
-							"label": "@lulatschia",
-							"href": "https://lulatschia.myportfolio.com/"
-						}
-					]
-				},
-				{
-					"name": "From Rag to Silk",
-					"folderName": "ragtosilk",
-					"video": true,
-					"videoEmbedID": "9PxdmKq58fs",
-					"date": "2022",
-					"category": "Personal",
-					"claim": "- Don't sew your fingers",
-					"tags": [
-						"coding",
-						"game-jam",
-						"concept"
-					],
-					"percentage": 33,
-					"viewAccess": [
-						"TestCompany"
-					],
-					"description": [
-						"A well-crafted dress makes all the difference in love. Help your customers in their pursuit of happiness.",
-						"From rag to silk is a skill game in which you have to operate a sewing machine. Speed and precision are the keys to success.",
-						"This game was created during 3 days of a game jam."
-					],
-					"picsDescr": [
-						"Start Screen (Screenshot).",
-						"Mid Game (Screenshot).",
-						"Mid Game (Screenshot).",
-						"Mid Game (Screenshot)."
-					],
-					"tasks": [
-						"Developement of concept",
-						"Coding of the entire project"
-					],
-					"quickLinks": [
-						{
-							"label": "Play",
-							"href": "https://lenzkleiser.itch.io/fromragtosilk"
-						}
-					],
-					"collaborators": [
-						{
-							"label": "@kathleenbohren1"
-						},
-						{
-							"label": "@ryanbrandt"
-						}
+						{}
 					]
 				},
 				{
 					"name": "Projected Dreams",
 					"folderName": "projecteddreams",
 					"video": true,
-					"videoEmbedID": "eXk1VR7Tm_o",
-					"date": "2022",
+					"videoEmbedID": "P7SP-_QKIWY",
+					"date": "2025",
 					"category": "Personal",
 					"tags": [
-						"concept",
-						"visuals",
-						"game-jam"
+						"techart",
+						"coding"
 					],
 					"percentage": 25,
-					"viewAccess": [
-						"TestCompany"
-					],
+					"viewAccess": [],
 					"description": [
-						"Fulfill the shadow girl's wishes by dragging the children's toys from the shelves and dropping them onto the table.",
-						"Recreate silhouettes close to the template in the spotlight to complete the level.",
-						"This game was created during 7 days of the Brackeys game jam."
+						"Drag toys from the shelves and drop them on the table to create a shadow play in this cozy puzzle game. As the shadows you cast uncover past family relationships and the environment around you changes and evolves, the lines between reality and fantasy blur.",
+						"This game is developed from the company Flawberry Studio."
 					],
 					"picsDescr": [
-						"\"Start Screen (Screenshot).",
-						"Mid Game (Screenshot).",
-						"Mid Game (Screenshot).",
-						"End screen (Screenshot)."
+						"Start Screen (Screenshot).",
+						"The photo album (Screenshot).",
+						"Building silhouettes (Screenshot).",
+						"One specific level (Screenshot)."
 					],
 					"tasks": [
-						"Shaders",
-						"Implementation of shadow matching mechanic"
+						"Producing",
+						"Tech Art",
+						"Coding"
 					],
 					"quickLinks": [
 						{
-							"label": "Play",
-							"href": "https://aoyuna.itch.io/projected-dreams"
+							"label": "Steam",
+							"href": "https://store.steampowered.com/app/2318800/Projected_Dreams/"
+						},
+						{
+							"label": "Trailer",
+							"href": "https://www.youtube.com/watch?v=XKHPraP1suY&ab_channel=FlawberryStudio"
+						},
+						{
+							"label": "Gameplay",
+							"href": "https://www.youtube.com/watch?v=qGKh79oTOXs&ab_channel=NoCommentaryCasualGaming"
 						}
 					],
 					"collaborators": [
 						{
-							"label": "@aoyuna",
-							"href": "https://aoyuna.com/"
+							"label": "@FlawberryStudio",
+							"href": "https://flawberrystudio.com/"
+						},
+						{}
+					]
+				},
+				{
+					"name": "Tom the postgirl",
+					"folderName": "tomthepostgirl",
+					"video": true,
+					"videoEmbedID": "Z2oX2vwnjfU",
+					"date": "2026",
+					"category": "Personal",
+					"tags": [
+						"techart",
+						"coding"
+					],
+					"percentage": 30,
+					"viewAccess": [],
+					"description": [
+						"Take a ride with Tom through her village and discover a great deal—perhaps too much—about the locals. Her approach, although controversial, is highly effective: intense and obsessive stalking."
+					],
+					"picsDescr": [
+						"Start Screen (Screenshot).",
+						"Peeking inside (Screenshot).",
+						"The newspapers (Screenshot).",
+						"Tom walking around in a level (Screenshot)."
+					],
+					"tasks": [
+						"Coding",
+						"Tech Art"
+					],
+					"quickLinks": [
+						{
+							"label": "Steam",
+							"href": "https://store.steampowered.com/app/2257440/Tom_the_postgirl/"
 						},
 						{
-							"label": "@robinGood",
-							"href": "https://www.portfolio-robingood.com/"
+							"label": "Trailer",
+							"href": "https://www.youtube.com/watch?v=QRDh-t6uQnk&ab_channel=OopsieDaisies"
 						},
 						{
-							"label": "@lucaImesch",
-							"href": "https://tondar.itch.io/"
+							"label": "Gameplay",
+							"href": "https://youtu.be/c7d-lZ9KTUk"
 						}
+					],
+					"collaborators": [
+						{
+							"label": "@OopsieDaisies",
+							"href": "https://www.oopsiedaisiesstudio.com/"
+						},
+						{}
 					]
 				}
 			]
@@ -202,67 +192,6 @@
 		{
 			"title": "ZHdK Games",
 			"projects": [
-				{
-					"name": "Gravity Drifter",
-					"folderName": "gravitydrifter",
-					"video": true,
-					"videoEmbedID": "DELfNbZKKxc",
-					"date": "2022",
-					"category": "ZHdK",
-					"tags": [
-						"coding",
-						"visuals"
-					],
-					"percentage": 25,
-					"viewAccess": [],
-					"description": [
-						"Gravity Drifter is a small game that tells the story of Solo, who finds himself in a twisted world. After a cataclysmic event, parts of this world have been turned upside down and can now be seen in the sky filled with clouds. With the help of whirlwinds, Solo can switch between the two sides and thus search the world for clues to the origin of this devastating event. Aided only by a sheep, Solo's only hope of doing something about the chaos is to find the source.",
-						"Gravity Drifter was developed as part of a student project at the Zurich University of Arts (ZHdK).  It was made in a total of seven weeks with a team of 5 students."
-					],
-					"picsDescr": [
-						"The two worlds (Screenshot).",
-						"Mid Game (Screenshot).",
-						"A lone hero (Screenshot).",
-						"Mid Game, during world switch (Screenshot)."
-					],
-					"tasks": [
-						"Mechanics",
-						"Systems programming",
-						"Shaders, Technical Art"
-					],
-					"quickLinks": [
-						{
-							"label": "Trailer",
-							"href": "https://youtu.be/pOX221JekFc"
-						},
-						{
-							"label": "Gameplay",
-							"href": "https://youtu.be/wzlpJ51Kniw"
-						},
-						{
-							"label": "Download",
-							"href": "https://rahelgamma.itch.io/gravity-drifter"
-						}
-					],
-					"collaborators": [
-						{
-							"label": "@RahelGamma",
-							"href": "https://rahelgamma.c"
-						},
-						{
-							"label": "@YoshiZiegerli",
-							"href": "https://www.instagram.com/deadhok/"
-						},
-						{
-							"label": "@Rozenberg",
-							"href": "https://itch.io/profile/rozenberg"
-						},
-						{
-							"label": "@IHolzen",
-							"href": "https://holzenburg.com/"
-						}
-					]
-				},
 				{
 					"name": "THAR",
 					"folderName": "thar",
@@ -313,7 +242,7 @@
 					]
 				},
 				{
-					"name": "Heatbeats And Brainwaves",
+					"name": "Heartbeats And Brainwaves",
 					"folderName": "beatsnbrains",
 					"video": true,
 					"videoEmbedID": "MfxMJJZBkR4",
@@ -363,97 +292,6 @@
 					]
 				},
 				{
-					"name": "Heels 'n Feels",
-					"folderName": "heelsnfeels",
-					"video": true,
-					"videoEmbedID": "g-did6fWnMw",
-					"date": "2020",
-					"category": "ZHdK",
-					"tags": [
-						"coding",
-						"mechanics"
-					],
-					"viewAccess": [],
-					"description": [
-						"Heels ‘n Feels is a queer, kinda furry visual novel with mini games about the perils of heelying too close to the sun. If you know that heelys are way cooler than skateboards and love to read a shit-ton of dialogue, then this games is for you!",
-						"This game was created by 18 game design students in two weeks for one of our class modules. The art style and music was partially inspired by a mix of all things 80s and 2000s.",
-						"Enter a world of chaos and confusion while trying to get rid of a corpse, that might kind of be your fault. But do try to bond with your friends as well, before you all have to go your separate ways."
-					],
-					"picsDescr": [
-						"'Trunk Tetris' Minigame (Screenshot).",
-						"Heelyin' (Screenshot).",
-						"Dialogue Sequence (Screenshot).",
-						"Dialogue Sequence (Screenshot)."
-					],
-					"tasks": [
-						"Two minigame mechanics",
-						"System programming",
-						"Dialogue programming"
-					],
-					"quickLinks": [
-						{
-							"label": "Download",
-							"href": "https://sk8terboii.itch.io/heels-n-feels"
-						},
-						{
-							"label": "Trailer",
-							"href": "https://www.youtube.com/watch?v=9jPSSWCKI5Y&feature=emb_title&ab_channel=BackpainGames"
-						}
-					],
-					"collaborators": [
-						{
-							"label": "First year GameDesign students"
-						}
-					]
-				},
-				{
-					"name": "Sansù",
-					"folderName": "sansu",
-					"video": true,
-					"videoEmbedID": "q1JuzaXRAFU",
-					"date": "2021",
-					"category": "ZHdK",
-					"claim": "VS Lords of the meat",
-					"tags": [
-						"coding",
-						"game-jam"
-					],
-					"viewAccess": [
-						"TestCompany"
-					],
-					"description": [
-						"Sansū VS Lords of the meat is a hack'n'slash game, combined with a math fight mechanic. It was produced during an internal game jam (3 days) at the Zürich University of the Arts, with a team of 14 game design students."
-					],
-					"picsDescr": [
-						"Title Screen.",
-						"Math Attack (Screenshot).",
-						"Walking (Screenshot).",
-						"Credits."
-					],
-					"tasks": [
-						"System Programming"
-					],
-					"quickLinks": [
-						{
-							"label": "Download",
-							"href": "https://leapero.itch.io/sansu-vs-lords-of-the-meat"
-						},
-						{
-							"label": "Trailer",
-							"href": "https://youtu.be/V6LqDupIPjg"
-						},
-						{
-							"label": "Gameplay",
-							"href": "https://youtu.be/6iDEsS5UKgc"
-						}
-					],
-					"collaborators": [
-						{
-							"label": "Game Design Students"
-						}
-					]
-				},
-				{
 					"name": "BIRBS",
 					"folderName": "birbs",
 					"video": true,
@@ -461,9 +299,8 @@
 					"date": "2022",
 					"category": "ZHdK",
 					"tags": [
-						"concept",
 						"coding",
-						"visuals"
+						"techart"
 					],
 					"percentage": 100,
 					"viewAccess": [],

@@ -4,19 +4,34 @@
 			"title": "Career",
 			"points": [
 				{
-					"name": "Bachelor Computer Science",
-					"location": "FernUniversität Hagen, Hagen DE",
-					"dates": "2020 - (2026) "
+					"name": "Programmer",
+					"location": "Oopsie Daisies, Zürich CH",
+					"dates": "2022 - Today"
 				},
 				{
-					"name": "Bachelor Game Design",
-					"location": "ZHdK University of the Arts, Zürich CH",
-					"dates": "2019 - (2023)"
+					"name": "Co-Founder",
+					"location": "Flawberry Studio, Zürich CH",
+					"dates": "2021 - Today"
+				},
+				{
+					"name": "Programmer, Game Designer",
+					"location": "Okomotive, Zürich CH",
+					"dates": "2023 - Today"
+				},
+				{
+					"name": "Bachelor: Computer Science",
+					"location": "FernUniversität Hagen, Hagen DE",
+					"dates": "2020 - (2026) "
 				},
 				{
 					"name": "Internship",
 					"location": "Okomotive, Zürich CH",
 					"dates": "July - August 2022"
+				},
+				{
+					"name": "Bachelor: Game Design",
+					"location": "ZHdK University of the Arts, Zürich CH",
+					"dates": "2019 - 2023"
 				},
 				{
 					"name": "High School Diploma",

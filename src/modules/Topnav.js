@@ -29,9 +29,7 @@ class TopNav extends React.Component {
             <div id="topnav-container" className={`${this.props.navExpanded ? "topnav-container-expanded" :""}`}>
                 {/* Logo */}
                 <LinkWithQuery className="logo-container" to="/" onClick={() => this.props.onPathChange("/")}>
-                    <div className="logo-container-inner">
-                        <Logo darkMode={this.props.darkMode}/>
-                    </div>
+                    <Logo darkMode={this.props.darkMode}/>
                 </LinkWithQuery>
                 <div id={`topnav`} className={`${this.props.navExpanded ? "topnav-expanded" :""}`}>
                 {/* Routes */}
@@ -44,9 +42,9 @@ class TopNav extends React.Component {
                         })
                     }
                     <DarkLightMode darkMode={this.props.darkMode} changeMode={this.props.changeMode} style={{ margin: "0px", marginLeft: "var(--topnav-item-margin)"}}/>
-                    </div>
+                </div>
                 {/* Social Media */}
-                    <SocialMedia />
+                <SocialMedia />
                 </div>
             </div>
         );

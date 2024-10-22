@@ -1,5 +1,5 @@
 import React from 'react';
-import {FaItchIo, FaVideo, FaFileAlt} from 'react-icons/fa';
+import {FaItchIo, FaVideo, FaFileAlt, FaSteam } from 'react-icons/fa';
 import '../styles/styles.css';
 import '../styles/animation.css';
 
@@ -8,12 +8,13 @@ export default class QuickLinks extends React.Component {
     getSymbol = (label) => {
         switch(label) {
             case "Download": return (<FaItchIo style={{margin: "0px 4px"}}/>);
+            case "Steam": return (<FaSteam style={{margin: "0px 4px"}}/>);
             case "Play": return (<FaItchIo style={{margin: "0px 4px"}}/>);
             case "Trailer": return (<FaVideo style={{margin: "0px 4px"}}/>);
             case "Showcase": return (<FaVideo style={{margin: "0px 4px"}}/>);
             case "Gameplay": return (<FaVideo style={{margin: "0px 4px"}}/>);
             case "Documentation": return (<FaFileAlt style={{margin: "0px 4px"}}/>);
-            default: return (<></>)
+            default: return (<>no</>)
         }
     }
     getStyle = () => {

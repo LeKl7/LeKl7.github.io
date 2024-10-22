@@ -14,6 +14,7 @@ html body {
     --logo-size: 150px;
     --logo-size-big: 500px;
     --topnav-item-margin: 50px;
+    --logo-brightness: 1.3;
     background-color: var(--main-color);
     
     min-height: 100vh; 

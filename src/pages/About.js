@@ -3,7 +3,6 @@ import '../styles/styles.css';
 import {Image} from 'cloudinary-react';
 
 export default class About extends React.Component {
-
     getKey(collection, item) {
         var key = 1;
         for (let collectionI = 0; collectionI < collection.length; collectionI++) {
@@ -20,6 +19,7 @@ export default class About extends React.Component {
 
     componentDidMount() {
         this.props.setBodyPadding();
+        window.scrollTo(0, 0);
     }
 
     render() {
@@ -39,23 +39,36 @@ export default class About extends React.Component {
                 </div>
                 <div className="d-card-text-container">
                     <div className="d-card-title-container">
-                        <h1 className="p header d-card-title">About me</h1>
+                        <h1 className="p header d-card-title">About me
+                        <sup style={{fontSize:"20px", marginLeft: "10px"}}>
+                            He / Him
+                        </sup>
+                        </h1>
                     </div>
                     <div className="d-card-text-container">
                         <div className="p p-body d-card-description" style={{lineHeight: "1.8"}}>
                             <div style={{marginBottom:"13px"}}>
-                                I’m a Swiss developer currently studying Game Design at the ZHdK in Zürich and computer science at the distance learning university Hagen.
+                                I’m a Swiss game developer who is a bit too involved in too many insanely cool projects.
                             </div>
                             <div style={{marginBottom:"13px"}}>
-                                My greatest fascination lies within the possibilities of 
-                                <div className={`p d-card-tag coding`} style={this.tagStyle}></div>.
-                                The process of creation through an abstract but strictly logical language, in a digital space without real world limitations.
+                                Half of my time I get to work on «Herdling» with the incredible people at 
+                                <a href="https://www.okomotive.ch/" style={{margin: "0 0.1em 0 0.1em", padding: "0 0.1em 0 0.1em", lineHeight: "initial"}} className="hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
+                                Okomotive
+                                </a>
+                                , the other half I am working on two projects of my own: «Tom the postgirl» with 
+                                <a href="https://www.oopsiedaisiesstudio.com/" style={{margin: "0 0.1em 0 0.1em", padding: "0 0.1em 0 0.1em", lineHeight: "initial"}} className="hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
+                                Oopsie Daisies
+                                </a>
+                                and «Projected Dreams» with 
+                                <a href="https://flawberrystudio.com/" style={{margin: "0 0.1em 0 0.1em", padding: "0 0.1em 0 0.1em", lineHeight: "initial"}} className="hvr-shutter-out-vertical-square" target="_blank" rel='noreferrer'>
+                                Flawberry Studio
+                                </a>
+                                .
                             </div>
                             <div style={{marginBottom:"13px"}}>
                                 I get inspired whilst working with other people, as everybody's mind is unique.
-                                <div className={`p d-card-tag game-design`} style={this.tagStyle}></div> 
-                                is my passion.
-                            </div>
+                                My greatest pleasure is juicing up interactions with<div className={`p d-card-tag techart`} style={this.tagStyle}></div> 
+                                and polishing the shit out of them.                            </div>
                         </div>
                     </div>
                 </div>

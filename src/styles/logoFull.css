@@ -19,8 +19,11 @@
   left: 0;
   width: calc(var(--logo-size-big) - 10px);
   height: calc(var(--logo-size-big) - 10px);
-
+  filter: brightness(0.7);
   transition: transform 2s ease-in-out;
+}
+.logo-full-profile {
+  filter: brightness(var(--logo-brightness));
 }
 .logo-full-container:hover .logo-full-outer {
   -webkit-transform: rotate(360deg);

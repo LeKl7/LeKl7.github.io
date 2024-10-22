@@ -11,13 +11,13 @@ export default class Logo extends React.Component {
         return (
             this.props.darkMode? 
             <>
-            <LogoOuterBlack className="logo logo-outer"/>
-            <LogoInnerBlack className="logo logo-inner"/>
+            <LogoOuterWhite className="logo logo-outer"/>
+            <LogoInnerWhite className="logo logo-inner"/>
             </> 
             :
             <>
-            <LogoOuterWhite className="logo logo-outer"/>
-            <LogoInnerWhite className="logo logo-inner"/>
+            <LogoOuterBlack className="logo logo-outer"/>
+            <LogoInnerBlack className="logo logo-inner"/>
             </> 
         );
     }

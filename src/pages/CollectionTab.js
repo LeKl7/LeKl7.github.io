@@ -5,6 +5,7 @@ import '../styles/topnav.css';
 
 export default class CollectionTab extends React.Component {
     componentDidMount() {
+        window.scrollTo(0, 0);
         this.props.setBodyPadding();
     }
 

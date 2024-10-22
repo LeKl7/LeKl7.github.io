@@ -16,9 +16,7 @@
 						"extension"
 					],
 					"percentage": 100,
-					"viewAccess": [
-						"TestCompany"
-					],
+					"viewAccess": [],
 					"description": [
 						"When doing procedural visuals you are in need of tileable textures. With this tool you will never have to search the internet again! Create and save textures within the Unity Editor.",
 						"Features include tileable 2D / 3D noise, which can be combined and modified to fit your needs. Afterwards, the textures can be saved as .png or as .asset files.",
@@ -63,7 +61,7 @@
 					"category": "Personal",
 					"tags": [
 						"coding",
-						"visuals"
+						"techart"
 					],
 					"percentage": 100,
 					"viewAccess": [],
@@ -88,6 +86,45 @@
 			"title": "ZHdK Projects",
 			"projects": [
 				{
+					"name": "Changing Matters",
+					"folderName": "changingmatters",
+					"video": true,
+					"videoEmbedID": "EiQs2LvO-iE",
+					"date": "2023",
+					"category": "ZHdK",
+					"tags": [
+						"techart",
+						"vrar"
+					],
+					"percentage": 100,
+					"viewAccess": [],
+					"description": [
+						"Changing Matters is an immersive game that transports players into an abstract and vibrant world. In this game, players control their avatar solely through their body movements. Crouch down, run around and hop to merge with the environment - to always change shape.",
+						"This was part of my bachelors thesis, where I explored the possibilities of modern motion-sensing cameras for games."
+					],
+					"picsDescr": [
+						"Startscreen (Screenshot).",
+						"Players are tracked in the physical space (Screenshot).",
+						"Couch to evade predators (Screenshot).",
+						"Players crouch in real life to trigger actions (Screenshot)."
+					],
+					"tasks": [
+						"Create game concept that deals with technological limitations",
+						"Setup data pipeline to stream data in and out Unity",
+						"Spatial mapping and spatial augmented reality setup "
+					],
+					"quickLinks": [
+						{
+							"label": "Trailer",
+							"href": "https://youtu.be/ey2WSu6Plfc"
+						},
+						{
+							"label": "Gameplay",
+							"href": "https://youtu.be/Opp2nnZhvzU"
+						}
+					]
+				},
+				{
 					"name": "RooMe",
 					"folderName": "roome",
 					"video": true,
@@ -99,9 +136,7 @@
 						"coding"
 					],
 					"percentage": 25,
-					"viewAccess": [
-						"TestCompany"
-					],
+					"viewAccess": [],
 					"description": [
 						"We humans collect things. Things that remind us of something. Many of them are important to us, however we can not grasp them because they do not exist physically.",
 						"Let's make the intangible tangible again. Through the embodiment and presence of data in a space, RooMe blurs the boundaries between physical and digital."
@@ -151,9 +186,7 @@
 						"game-design"
 					],
 					"percentage": 50,
-					"viewAccess": [
-						"TestCompany"
-					],
+					"viewAccess": [],
 					"description": [
 						"Marble Escape is a competitive marble-racing boardgame through three layers of a labyrinth.",
 						"Swap black tiles to change the labyrinth. Outsmart your opponent by blocking his way but opening the way to victory for yourself."
@@ -180,156 +213,6 @@
 							"href": "https://www.instagram.com/milkimoone"
 						},
 						{}
-					]
-				},
-				{
-					"name": "Windturbine A25",
-					"folderName": "windturbine",
-					"video": true,
-					"videoEmbedID": "QOEQxVFeGQw",
-					"date": "2021",
-					"category": "ZHdK",
-					"tags": [
-						"visuals",
-						"sound"
-					],
-					"percentage": 100,
-					"viewAccess": [],
-					"description": [
-						"We were tasked to create an object in the style of the designer Dieter Rams.",
-						"I created the Windturbine A25 in blender and made four animation clips inside Unity. Afterwards, I did the sound design. The full clip can be seen in the trailer."
-					],
-					"picsDescr": [
-						"Cover image.",
-						"Screenshot.",
-						"Screenshot.",
-						"Screenshot."
-					],
-					"tasks": [
-						"Modelling and texturing in Blender",
-						"Animation in Unity",
-						"Sounddesign"
-					],
-					"quickLinks": [
-						{
-							"label": "Trailer",
-							"href": "https://youtu.be/UZu22OHWTFE"
-						}
-					]
-				},
-				{
-					"name": "Heather Gray",
-					"folderName": "heathergray",
-					"video": true,
-					"videoEmbedID": "vze3jWtvbZs",
-					"date": "2022",
-					"category": "ZHdK",
-					"tags": [
-						"visuals",
-						"sound"
-					],
-					"percentage": 33,
-					"viewAccess": [
-						"HidePublicly"
-					],
-					"description": [
-						"You are a sprayer in an abandoned school. It is dark and quiet, at least until you realize you’re not alone. Heather Gray, a schoolgirl, is missing since a few months. You may find out where she is held.",
-						"We were tasked to create the first minutes of a immersive walking simulator with AAA graphics. Everything was modeled and textured by ourselves, it was recorded in realtime in Unity, the sound was added in post."
-					],
-					"picsDescr": [
-						"Fictional Start Screen.",
-						"View on the elevator (Screenshot).",
-						"View on the school building (Screenshot).",
-						"Close-up elevator (Screenshot)."
-					],
-					"tasks": [
-						"I was responsible from 01:36 to 03:51.",
-						"3D Modeling, Visual Effects",
-						"Sound design"
-					],
-					"quickLinks": [
-						{
-							"label": "Gameplay",
-							"href": "https://youtu.be/TCC2GkF25bM"
-						}
-					],
-					"collaborators": [
-						{
-							"label": "@milkimoone",
-							"href": "https://www.instagram.com/milkimoone"
-						},
-						{
-							"label": "@RobinGood",
-							"href": "https://www.portfolio-robingood.com/"
-						}
-					]
-				},
-				{
-					"name": "Too MUCH!",
-					"folderName": "toomuch",
-					"video": true,
-					"videoEmbedID": "ypnxJu6msPA",
-					"date": "2020",
-					"category": "ZHdK",
-					"tags": [
-						"mechanics",
-						"coding"
-					],
-					"percentage": 100,
-					"viewAccess": [
-						"TestCompany"
-					],
-					"description": [
-						"Do you ever feel overwhelmed by too much affection? I know, happens to me all the time too! Slap your obnoxious punter away before they can reach your heart and trap it forerver.",
-						"In this project, I created a game given the theme \"I have nothing, if I don't have you\". It was programmed in Processing."
-					],
-					"picsDescr": [
-						"Midgame (Screenshot).",
-						"Midgame (Screenshot).",
-						"Underlying processing of movement (Screenshot).",
-						"End screen (Screenshot)."
-					],
-					"tasks": [
-						"Programming in the program Processing"
-					]
-				},
-				{
-					"name": "Send NEWS!",
-					"folderName": "sendnews",
-					"video": true,
-					"videoEmbedID": "1ZWumjEy5jU",
-					"date": "2020",
-					"category": "ZHdK",
-					"tags": [
-						"storytelling",
-						"coding"
-					],
-					"percentage": 50,
-					"viewAccess": [
-						"HidePublicly"
-					],
-					"description": [
-						"This project deals with the digital and volatile interactions as well as the news overflow during the corona pandemic.",
-						"In the background, both visually and auditive, there's constant news about corona in 25 different languages. Only by interacting with others, as distant and mediated as they may seem, you can silence the intense stream of bad news. At least just for a moment.",
-						"\"Send NEWS!\" is a realtime chat application, playable in the browser, in which up to 10 people can talk to each other."
-					],
-					"picsDescr": [
-						"Midgame (Screenshot).",
-						"Midgame (Screenshot).",
-						"Midgame (Screenshot).",
-						"Midgame with multiple connections (Screenshot)."
-					],
-					"tasks": [
-						"Text shader",
-						"Game programming",
-						"Webserver setup",
-						"Sound Design"
-					],
-					"collaborators": [
-						{
-							"label": "@lunaelaine",
-							"href": "https://luna-elaine.com/"
-						}
 					]
 				}
 			]

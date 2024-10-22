@@ -77,14 +77,14 @@
 .coding::after {
     content:"Coding";
 }
-.visuals {
+.techart {
     --color: #9988b9;
     background-color: var(--color);
     border-color: var(--color);
     color: var(--color);
 }
-.visuals::after {
-    content:"Visuals";
+.techart::after {
+    content:"TechArt";
 }
 .game-jam {
     --color: #60397b;

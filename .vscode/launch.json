@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "node-terminal",
+            "name": "Run Script: deploy",
+            "request": "launch",
+            "command": "npm run deploy",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}

@@ -142,8 +142,9 @@ class App extends Component {
 
     /* ---- Dark Light Mode */
     changeMode = () => {
-        document.documentElement.style.setProperty('--main-color', !this.state.darkMode? "#111" : "#e4e3e3");
-        document.documentElement.style.setProperty('--secondary-color', !this.state.darkMode? "#e4e3e3":"#111");
+        document.documentElement.style.setProperty('--main-color', !this.state.darkMode? "#111" : "#fafafa");
+        document.documentElement.style.setProperty('--secondary-color', !this.state.darkMode? "#e4e3e3":"#2f2f2f");
+        document.documentElement.style.setProperty('--logo-brightness', !this.state.darkMode? "1.3" : "0.7");
         this.setState({darkMode: !this.state.darkMode});
         this.forceUpdate();
     }
@@ -176,9 +177,9 @@ class App extends Component {
             </div>  
             
             <Modal imgSource={this.state.modalImgSource} openModal={this.openModal} closeModal={this.closeModal} setImgSource={(e) => this.setImgSource(e)} gameCollection={this.gameCollection.data} projectCollection={this.projectCollection.data}/>
-            
+
             <Switch>
-                <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig} onPathChange={this.onPathChange}/>}/>
+                <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig} onPathChange={this.onPathChange} darkMode={this.state.darkMode}/>}/>
                 <Route path="/about" render={()=><About data={CVData} setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route path="/games" render={()=><CollectionTab 
                     projectCollection={this.getCollection(true, this.props.query.get('tailored')).data} 

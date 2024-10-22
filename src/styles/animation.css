@@ -32,7 +32,7 @@
     transition-timing-function: ease-out;
   }
   .hvr-shutter-out-vertical:hover, .hvr-shutter-out-vertical:focus, .hvr-shutter-out-vertical:active,  
-  .hvr-shutter-out-vertical-square:hover, .hvr-shutter-out-vertical-square:focus, .hvr-shutter-out-vertical-square:active, 
+  .hvr-shutter-out-vertical-square:hover, .hvr-shutter-out-vertical-square:active, 
   .hrv-shutter-out-vertical-focused{
     color: var(--main-color) !important;
   }
@@ -40,10 +40,7 @@
     -webkit-transform: scaleY(1.2);
     transform: scaleY(1.2);
   }
-  .hrv-shutter-out-vertical-focused {
-    color: var(--main-color) !important;
-  }
-  
+
   .hvr-shutter-out-vertical-square {
     display: inline-block;
     vertical-align: text-top;
