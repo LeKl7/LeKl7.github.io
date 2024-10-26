@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as Router, Route, Switch, useLocation} from "react-router-dom";
+import {AdvancedImage, lazyload, placeholder} from '@cloudinary/react';
+import {Cloudinary, CloudinaryImage, URLConfig, CloudConfig} from "@cloudinary/url-gen";
 import Topnav from './modules/Topnav';
 import Modal from './modules/Modal';
 import Home from './pages/Home';
@@ -7,12 +9,12 @@ import About from './pages/About';
 import { NoMatch } from './pages/NoMatch';
 import CollectionTab from './pages/CollectionTab';
 import Contact from './pages/Contact';
-
 import CVData from './assets/data/CVData.json';
 import GamesData from './assets/data/games.json';
 import GamesDataTestCompany from './assets/data/games_TestCompany.json';
 import ProjectData from './assets/data/projects.json';
 import ProjectDataTestCompany from './assets/data/projects_TestCompany.json';
+import { isString } from '@cloudinary/url-gen/internal/utils/dataStructureUtils';
 
 class App extends Component {
     constructor(props) {
@@ -49,7 +51,7 @@ class App extends Component {
             windowWidth: window.innerWidth,
             navExpanded: false,
             modalOpen: false,
-            modalImgSource: "",
+            modalImageData: "",
             filterOpen: false,
             filter: [],
             darkMode: true
@@ -59,7 +61,7 @@ class App extends Component {
         this.gameCollection = GamesData;
         /* This lists all the games that can be viewed under the projects tab */
         this.projectCollection = ProjectData;
-
+        this.updateImageData();
         this.defaultBodyPadding = 0;
     }
 
@@ -104,7 +106,6 @@ class App extends Component {
     setHeight = (path) => {
         const rootElement = document.getElementById('root');
         const height = path === "/projects" ? 1 : 1;
-        //const height = path === "/projects" ? this.getHeight() + 1 : 1;
         rootElement.style.minHeight = `${(height*100).toString()}vh`;
     }
     onPathChange = (path) => {
@@ -126,18 +127,43 @@ class App extends Component {
     };
 
     /* ---- Modal functions */
-    openModal = (imgSource) => {
+    openModal = (imageData) => {
         const modal = document.getElementById("myModal");
         modal.style.display = "flex";
-        this.setState({modalOpen: true, modalImgSource: imgSource, modalFocusedProject: imgSource});
+        this.setState({modalOpen: true, modalImageData: imageData});
     };
+
     closeModal = () => {
         const modal = document.getElementById("myModal");
         modal.style.display = "none";
-        this.setState({modalOpen: false, modalImgSource: ""});
+        this.setState({modalOpen: false});
     };
-    setImgSource = (string) => {
-        this.setState({modalImgSource: string});
+
+    setImgSource = (projectName, index) => {
+        console.log(index);
+        for (let collectionIndex = 0; collectionIndex < this.gc.length; collectionIndex++) {
+            const projectCollection = this.gc[collectionIndex];
+            for (let projectIndex = 0; projectIndex < projectCollection.projects.length; projectIndex++) {
+                const project = projectCollection.projects[projectIndex];
+                if(project.folderName === projectName) {
+                    console.log(this.gameImages[collectionIndex][projectIndex][index]);
+                    this.setState({modalImageData: this.gameImages[collectionIndex][projectIndex][index]});
+                    return;
+                }
+            }
+        }
+        
+        for (let collectionIndex = 0; collectionIndex < this.pc.length; collectionIndex++) {
+            const projectCollection = this.gc[collectionIndex];
+            for (let projectIndex = 0; projectIndex < projectCollection.projects.length; projectIndex++) {
+                const project = projectCollection.projects[projectIndex];
+                if(project.folderName === project) {
+                    console.log(this.projectImages[collectionIndex][projectIndex][index]);
+                    this.setState({modalImageData: this.projectImages[collectionIndex][projectIndex][index]});
+                    return;
+                }
+            }
+        }
     };
 
     /* ---- Dark Light Mode */
@@ -146,7 +172,11 @@ class App extends Component {
         document.documentElement.style.setProperty('--secondary-color', !this.state.darkMode? "#e4e3e3":"#2f2f2f");
         document.documentElement.style.setProperty('--logo-brightness', !this.state.darkMode? "1.3" : "0.7");
         this.setState({darkMode: !this.state.darkMode});
-        this.forceUpdate();
+        //this.forceUpdate();
+    }
+
+    getMainColor = () =>  {
+        return !this.state.darkMode? "#111" : "#fafafa";
     }
 
     /* --- Tag Filtering Functions */
@@ -166,6 +196,44 @@ class App extends Component {
             this.setState({filter: this.state.filter.concat([string])});
     }
 
+    updateImageData = () => {
+        this.cld = new Cloudinary({
+            cloud: {
+              cloudName: 'lorenzkleiser'
+            },
+            secure: true
+          }); 
+        
+        this.gc = this.getCollection(true, this.props.query.get('tailored')).data;
+        this.gameImages = []
+        for (let index = 0; index < this.gc.length; index++) {
+            this.gameImages[index] = [];
+            for (let projectIndex = 0; projectIndex < this.gc[index].projects.length; projectIndex++) {
+                this.gameImages[index][projectIndex] = [];
+                const project = this.gc[index].projects[projectIndex];
+                this.gameImages[index][projectIndex][0] = this.cld.image(`${project.folderName}/1.png`).format('auto').quality('auto');
+                this.gameImages[index][projectIndex][1] = this.cld.image(`${project.folderName}/2.png`).format('auto').quality('auto');
+                this.gameImages[index][projectIndex][2] = this.cld.image(`${project.folderName}/3.png`).format('auto').quality('auto');
+                this.gameImages[index][projectIndex][3] = this.cld.image(`${project.folderName}/4.png`).format('auto').quality('auto');
+                this.gameImages[index][projectIndex][4] = this.cld.image(`${project.folderName}/Main.png`).format('auto').quality('auto');
+            }
+        }
+
+        this.pc = this.getCollection(false, this.props.query.get('tailored')).data;
+        this.projectImages = []
+        for (let index = 0; index < this.pc.length; index++) {
+            this.projectImages[index] = [];
+            for (let projectIndex = 0; projectIndex < this.pc[index].projects.length; projectIndex++) {
+                this.projectImages[index][projectIndex] = [];
+                const project = this.pc[index].projects[projectIndex];
+                this.projectImages[index][projectIndex][0] = this.cld.image(`${project.folderName}/1.png`).format('auto').quality('auto');
+                this.projectImages[index][projectIndex][1] = this.cld.image(`${project.folderName}/2.png`).format('auto').quality('auto');
+                this.projectImages[index][projectIndex][2] = this.cld.image(`${project.folderName}/3.png`).format('auto').quality('auto');
+                this.projectImages[index][projectIndex][3] = this.cld.image(`${project.folderName}/4.png`).format('auto').quality('auto');
+                this.projectImages[index][projectIndex][4] = this.cld.image(`${project.folderName}/Main.png`).format('auto').quality('auto');
+            }
+        }
+    }
 
     render() {
         return (
@@ -176,16 +244,17 @@ class App extends Component {
                 <Topnav routes={this.state} onPathChange={this.onPathChange} onNavExpand={this.onNavExpand} navExpanded={this.state.navExpanded} windowWidth={this.state.windowWidth} darkMode={this.state.darkMode} changeMode={this.changeMode}/>
             </div>  
             
-            <Modal imgSource={this.state.modalImgSource} openModal={this.openModal} closeModal={this.closeModal} setImgSource={(e) => this.setImgSource(e)} gameCollection={this.gameCollection.data} projectCollection={this.projectCollection.data}/>
+            <Modal imageData = {this.state.modalImageData} openModal={this.openModal} closeModal={this.closeModal} setImgSource={(p, i) => this.setImgSource(p, i)} gameCollection={this.gameCollection.data} projectCollection={this.projectCollection.data}/>
 
             <Switch>
                 <Route exact path="/" render={()=><Home setBodyPadding={this.setBodyPaddig} onPathChange={this.onPathChange} darkMode={this.state.darkMode}/>}/>
                 <Route path="/about" render={()=><About data={CVData} setBodyPadding={this.setBodyPaddig}/>} navExpanded={this.state.navExpanded}/>
                 <Route path="/games" render={()=><CollectionTab 
                     projectCollection={this.getCollection(true, this.props.query.get('tailored')).data} 
+                    imageData={this.gameImages} 
                     navExpanded={this.state.navExpanded} 
                     setBodyPadding={this.setBodyPaddig} 
-                    onImgClick={(string) => this.openModal(string)} 
+                    onImgClick={(imageData) => this.openModal(imageData)} 
                     onFilterToggle={() => this.onFilterToggle()} 
                     onFilterChange={(string)=> this.onFilterChange(string)} 
                     filterExpanded={this.state.filterOpen}
@@ -193,9 +262,10 @@ class App extends Component {
                     />}/>
                 <Route path="/projects" render={()=><CollectionTab 
                     projectCollection={this.getCollection(false, this.props.query.get('tailored')).data} 
+                    imageData={this.projectImages} 
                     navExpanded={this.state.navExpanded} 
                     setBodyPadding={this.setBodyPaddig} 
-                    onImgClick={(string) => this.openModal(string)} 
+                    onImgClick={(imageData) => this.openModal(imageData)} 
                     onFilterToggle={() => this.onFilterToggle()} 
                     onFilterChange={(string)=> this.onFilterChange(string)}  
                     filterExpanded={this.state.filterOpen}

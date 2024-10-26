@@ -42,8 +42,15 @@ export default class CollectionTab extends React.Component {
                         var key = this.getKey(this.props.projectCollection, project);
                         return (
                             <section className="d-body" id={key} key={key}>
-                            <ProjectCard project={project} key={key} listID={key} onImgClick={(string) => this.props.onImgClick(string)} sectionName={collection.title}
-                                isFirst={(collection.projects.indexOf(project) === 0)} isLast={(collection.projects.indexOf(project) === collection.projects.length-1) && (this.props.projectCollection.indexOf(collection) === this.props.projectCollection.length-1)}
+                            <ProjectCard 
+                                project={project} 
+                                imageData = {this.props.imageData[this.props.projectCollection.indexOf(collection)][this.props.projectCollection[this.props.projectCollection.indexOf(collection)].projects.indexOf(project)]}
+                                key={key} 
+                                listID={key} 
+                                onImgClick={(string) => this.props.onImgClick(string)} 
+                                sectionName={collection.title}
+                                isFirst={(collection.projects.indexOf(project) === 0)} 
+                                isLast={(collection.projects.indexOf(project) === collection.projects.length-1) && (this.props.projectCollection.indexOf(collection) === this.props.projectCollection.length-1)}
                             />
                             </section>
                     )})

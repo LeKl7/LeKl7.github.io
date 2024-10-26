@@ -9,6 +9,7 @@
   border-bottom: 5px solid var(--secondary-color);
   border-right: 5px solid var(--secondary-color);
   border-bottom-right-radius: 10px;
+  background-color: var(--main-color);
 }
 .logo {
   position: absolute;

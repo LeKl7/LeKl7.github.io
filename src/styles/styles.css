@@ -29,14 +29,16 @@
     flex-flow: column;
     margin: 10px;
     max-height: 100%;
+    width: 100%;
 }
 
 .d-card-img {
-    max-width: 100%;
+    width: 100%;
     /* max-height: 100%; */
-     
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
+    min-height: 48.3%;
 } 
 
 .video-wrapper {
@@ -126,7 +128,7 @@ position: absolute;
 }
 
 
-@media only screen and (max-width: 640px) {
+@media only screen and (max-width: 800px) {
     .d-card {
         flex-flow: column;
     }
@@ -147,7 +149,7 @@ position: absolute;
         display: none !important;
     }
 }
-@media only screen and (min-width: 670px){
+@media only screen and (min-width: 800px){
 }
 @media only screen and (min-width: 1200px){
 

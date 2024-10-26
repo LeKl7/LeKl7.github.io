@@ -1,51 +1,7 @@
 {
 	"data": [
 		{
-			"title": "Client Games",
-			"projects": [
-				{
-					"name": "Ugly’s Magic",
-					"folderName": "uglysmagic",
-					"video": true,
-					"videoEmbedID": "Nnr_Eq-ufsQ",
-					"date": "2021",
-					"category": "Client",
-					"tags": [
-						"concept",
-						"techart",
-						"coding"
-					],
-					"percentage": 100,
-					"viewAccess": [],
-					"description": [
-						"This project is an hommage to the old 'Ugly' nightclub in Zürich. The former owner, Ulrich Steinle, approached me to make a game installation for his 50th anniversary exibition in Richterswil.",
-						"Bring people to the 'Ugly' with good music! You play as the 'U' from 'Ugly' to lure as many cars as possible into the nightclub before the morning.",
-						"This installation was exhibited for one month."
-					],
-					"picsDescr": [
-						"Player collected a record (Screenshot).",
-						"Installation from the side.",
-						"Installation from the front.",
-						"Advertisement brochure for the event."
-					],
-					"tasks": [
-						"Creation of the installation."
-					],
-					"quickLinks": [
-						{
-							"label": "Trailer",
-							"href": "https://youtu.be/D4yMdezHH-U"
-						},
-						{
-							"label": "Gameplay",
-							"href": "https://youtu.be/w3hPMI0cnWw"
-						}
-					]
-				}
-			]
-		},
-		{
-			"title": "Personal Games",
+			"title": "Commercial Games",
 			"projects": [
 				{
 					"name": "Herdling",
@@ -60,7 +16,7 @@
 					"viewAccess": [],
 					"description": [
 						"Head out on a grand alpine expedition with a herd of loveable beasts, as you ascend a mountain path, encounter eerie dangers and surprising obstacles, and forge your way to the mystery at the summit.",
-						"Herdling"
+						"Herdling is a brand new adventure from Okomotive, creators of the atmospheric and acclaimed FAR games, and Panic, publishers of Firewatch."
 					],
 					"picsDescr": [
 						"Animals on the plains (Screenshot).",
@@ -69,7 +25,9 @@
 						"Via taming animals (Screenshot)."
 					],
 					"tasks": [
-						"Coding"
+						"Gameplay programming",
+						"Designed and coded camera system",
+						"Implemented staged events"
 					],
 					"quickLinks": [
 						{
@@ -81,7 +39,7 @@
 							"href": "https://www.youtube.com/watch?v=tUEcKBVzhQg&ab_channel=Panic"
 						}
 					],
-					"collaborators": [
+					"studios": [
 						{
 							"label": "@Okomotive",
 							"href": "https://www.okomotive.ch/"
@@ -131,7 +89,7 @@
 							"href": "https://www.youtube.com/watch?v=qGKh79oTOXs&ab_channel=NoCommentaryCasualGaming"
 						}
 					],
-					"collaborators": [
+					"studios": [
 						{
 							"label": "@FlawberryStudio",
 							"href": "https://flawberrystudio.com/"
@@ -179,12 +137,56 @@
 							"href": "https://youtu.be/c7d-lZ9KTUk"
 						}
 					],
-					"collaborators": [
+					"studios": [
 						{
 							"label": "@OopsieDaisies",
 							"href": "https://www.oopsiedaisiesstudio.com/"
 						},
 						{}
+					]
+				}
+			]
+		},
+		{
+			"title": "Client Games",
+			"projects": [
+				{
+					"name": "Ugly’s Magic",
+					"folderName": "uglysmagic",
+					"video": true,
+					"videoEmbedID": "Nnr_Eq-ufsQ",
+					"date": "2021",
+					"category": "Client",
+					"tags": [
+						"concept",
+						"techart",
+						"coding"
+					],
+					"percentage": 100,
+					"viewAccess": [],
+					"description": [
+						"This project is an hommage to the old 'Ugly' nightclub in Zürich. The former owner, Ulrich Steinle, approached me to make a game installation for his 50th anniversary exibition in Richterswil.",
+						"Bring people to the 'Ugly' with good music! You play as the 'U' from 'Ugly' to lure as many cars as possible into the nightclub before the morning.",
+						"This installation was exhibited for one month."
+					],
+					"picsDescr": [
+						"Player collected a record (Screenshot).",
+						"Installation from the side.",
+						"Installation from the front.",
+						"Advertisement brochure for the event."
+					],
+					"tasks": [
+						"Creation of the installation."
+					],
+					"quickLinks": [
+						{
+							"label": "Trailer",
+							"href": "https://youtu.be/D4yMdezHH-U"
+						},
+						{
+							"label": "Gameplay",
+							"href": "https://youtu.be/w3hPMI0cnWw"
+						}
 					]
 				}
 			]

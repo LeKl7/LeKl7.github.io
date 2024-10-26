@@ -28,19 +28,28 @@ export default class ProjectCard extends Component {
                 <div className="d-card-img-container" id={`imgContainer${this.props.listID}`}>
                         {/* Video */}
                         {this.props.project.video &&
-                            //<Video className="d-card-img-main d-card-img" autoPlay loop={true} muted controls webkit-playsinline="true" playsInline cloudName="lorenzkleiser" publicId={`https://res.cloudinary.com/lorenzkleiser/video/upload/videos/${this.props.project.folderName}.mp4`}/>
-                            <YoutubeEmbed embedId={this.props.project.videoEmbedID}/>
+                            <YoutubeEmbed embedId={this.props.project.videoEmbedID} imageData = {this.props.imageData[0]}/>
                         }
                         {/* Main Photo */}
                         {!this.props.project.video &&
-                            <ClickableImage folder={this.props.project.folderName} imgName={"Main.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage 
+                                imageData = {this.props.imageData[4]}
+                                onImgClick={(string) => this.props.onImgClick(string)}/>
                         }
 
                         <div className="d-card-img-screenshots-container">
-                            <ClickableImage folder={this.props.project.folderName} imgName={"1.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
-                            <ClickableImage folder={this.props.project.folderName} imgName={"2.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
-                            <ClickableImage folder={this.props.project.folderName} imgName={"3.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
-                            <ClickableImage folder={this.props.project.folderName} imgName={"4.png"} onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage 
+                                imageData = {this.props.imageData[0]}
+                                onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage 
+                                imageData = {this.props.imageData[1]}
+                                onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage 
+                                imageData = {this.props.imageData[2]}
+                                onImgClick={(string) => this.props.onImgClick(string)}/>
+                            <ClickableImage 
+                                imageData = {this.props.imageData[3]}
+                                onImgClick={(string) => this.props.onImgClick(string)}/>
                         </div>
                 </div>
                 {/* Text Container */}
@@ -75,6 +84,20 @@ export default class ProjectCard extends Component {
                                         style={{verticalAlign: "top", marginLeft: "10px"}} key={this.props.project.collaborators.indexOf(c)}> {c.label} </a>
                                         :
                                         <p style={{verticalAlign: "top", marginLeft: "10px", display: "inline"}} key={this.props.project.collaborators.indexOf(c)}> {c.label} </p> 
+                                );
+                            })}
+                        </div>}
+                        {/* Studio info */}
+                        {this.props.project.studios != null &&
+                        <div className="p-oblique" style={{marginBottom:"13px"}}>
+                            Studio: 
+                            {this.props.project.studios.map(c => {
+                                return (
+                                    c.href != null ?
+                                        <a className="hvr-shutter-out-vertical hvr-shutter-out-vertical-square" href={c.href} target="_blank" rel='noreferrer'
+                                        style={{verticalAlign: "top", marginLeft: "10px"}} key={this.props.project.studios.indexOf(c)}> {c.label} </a>
+                                        :
+                                        <p style={{verticalAlign: "top", marginLeft: "10px", display: "inline"}} key={this.props.project.studios.indexOf(c)}> {c.label} </p> 
                                 );
                             })}
                         </div>}

@@ -1,8 +1,16 @@
 import React from "react";
 import PropTypes from "prop-types";
+import {AdvancedImage, placeholder} from '@cloudinary/react';
 
-const YoutubeEmbed = ({ embedId }) => (
+const YoutubeEmbed = ({ embedId, imageData }) => (
   <div className="video-responsive">
+    <AdvancedImage 
+      id={`${imageData.publicID}`}
+      cldImg={imageData}
+      plugins={[placeholder({mode: 'predominant-color'})]}
+      width ="100%"
+      style={{borderRadius: "8px"}}
+    />
     <iframe
       width="853"
       height="480"

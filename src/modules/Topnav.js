@@ -97,7 +97,7 @@ export default class RoutedTopNav extends React.Component {
         const RouterTopNav = withRouter(TopNav);
         const RouterTopNavSmall = withRouter(TopNavSmall);
         return (
-                this.props.windowWidth < 640 ? 
+                this.props.windowWidth < 800 ? 
                 <RouterTopNavSmall routes={this.props.routes} onPathChange={(path)=> this.props.onPathChange(path)} onNavExpand={()=>this.props.onNavExpand()} navExpanded={this.props.navExpanded} darkMode={this.props.darkMode} changeMode={this.props.changeMode}></RouterTopNavSmall>
                 :
                 <RouterTopNav routes={this.props.routes} onPathChange={(path)=> this.props.onPathChange(path)} onNavExpand={()=>this.props.onNavExpand()} navExpanded={this.props.navExpanded} darkMode={this.props.darkMode} changeMode={this.props.changeMode}></RouterTopNav>
